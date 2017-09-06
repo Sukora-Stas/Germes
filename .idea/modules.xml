@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/germes.iml" filepath="$PROJECT_DIR$/germes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/germes-model/germes-model.iml" filepath="$PROJECT_DIR$/germes-model/germes-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/germes-persistence/germes-persistence.iml" filepath="$PROJECT_DIR$/germes-persistence/germes-persistence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/germes-presentation/germes-presentation.iml" filepath="$PROJECT_DIR$/germes-presentation/germes-presentation.iml" />
+    </modules>
+  </component>
+</project>
