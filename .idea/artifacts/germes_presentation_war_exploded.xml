@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="germes-presentation:war exploded">
-    <output-path>$PROJECT_DIR$/germes-presentation/target/germes-presentation-0.0.1</output-path>
+    <output-path>$PROJECT_DIR$/germes-presentation/target/germes-presentation-0.0.3</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -8,7 +8,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/germes-presentation/target/germes-presentation-0.0.1/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/germes-presentation/target/germes-presentation-0.0.3/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="germes-presentation/web/Web" />
     </root>

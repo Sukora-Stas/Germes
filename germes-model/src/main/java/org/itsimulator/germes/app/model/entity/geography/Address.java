@@ -2,53 +2,53 @@ package org.itsimulator.germes.app.model.entity.geography;
 
 /**
  * Value type that stores address attributes
- * of the specific office or person 
- * @author admin
+ * of the specific office or person
  *
+ * @author admin
  */
 public class Address {
-	private String zipCode;
-	
-	private String street;
-	
-	private String houseNo;
+    private String zipCode;
 
-	/**
-	 * (Optional) Apartment number if it's address 
-	 * of the apartment 
-	 */
-	private String apartment;
+    private String street;
 
-	public String getZipCode() {
-		return zipCode;
-	}
+    private String houseNo;
 
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
-	}
+    /**
+     * (Optional) Apartment number if it's address
+     * of the apartment
+     */
+    private String apartment;
 
-	public String getStreet() {
-		return street;
-	}
+    public String getZipCode() {
+        return zipCode;
+    }
 
-	public void setStreet(String street) {
-		this.street = street;
-	}
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
 
-	public String getHouseNo() {
-		return houseNo;
-	}
+    public String getStreet() {
+        return street;
+    }
 
-	public void setHouseNo(String houseNo) {
-		this.houseNo = houseNo;
-	}
+    public void setStreet(String street) {
+        this.street = street;
+    }
 
-	public String getApartment() {
-		return apartment;
-	}
+    public String getHouseNo() {
+        return houseNo;
+    }
 
-	public void setApartment(String apartment) {
-		this.apartment = apartment;
-	}
+    public void setHouseNo(String houseNo) {
+        this.houseNo = houseNo;
+    }
+
+    public String getApartment() {
+        return apartment;
+    }
+
+    public void setApartment(String apartment) {
+        this.apartment = apartment;
+    }
 
 }
