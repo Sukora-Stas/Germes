@@ -1,6 +1,8 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
@@ -64,7 +66,7 @@ public class City extends AbstractEntity {
     }
 
     public Set<Station> getStations() {
-        return stations;
+        return Collections.unmodifiableSet(Optional.ofNullable(stations).orElse( Collections.emptySet()));
     }
 
     public void setStations(Set<Station> stations) {
