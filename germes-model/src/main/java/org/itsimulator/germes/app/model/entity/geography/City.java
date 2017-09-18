@@ -4,6 +4,7 @@ import java.util.*;
 
 import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
+import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
 /**
  * Any locality that contains transport stations
@@ -29,6 +30,10 @@ public class City extends AbstractEntity {
      * loyality
      */
     private Set<Station> stations;
+
+    public City(final String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -64,30 +69,30 @@ public class City extends AbstractEntity {
 
     /**
      * Adds specified station to the city station list
-     *
      * @param station
      */
-    public void addStation(final Station station) {
-        Objects.requireNonNull(station, "station parameter is not initialized");
-        if (stations == null) {
+    public Station addStation(final TransportType transportType) {
+        if(stations == null) {
             stations = new HashSet<>();
         }
+        Station station = new Station(this, transportType);
         stations.add(station);
-        station.setCity(this);
+
+        return station;
     }
 
     /**
      * Removes specified station from city station list
-     *
      * @param station
      */
     public void removeStation(Station station) {
         Objects.requireNonNull(station, "station parameter is not initialized");
-        if (stations == null) {
+        if(stations == null) {
             return;
         }
         stations.remove(station);
     }
 
 }
+
 

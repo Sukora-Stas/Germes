@@ -12,8 +12,14 @@
     </modules>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- These properties will be set by the Maven Dependency plugin -->
+        <!-- Change to jdk7 if using Java 7 -->
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
+        <checkerFrameworkVersion><!-- checker-framework-version -->
+            2.2.0<!-- /checker-framework-version --></checkerFrameworkVersion>
+
     </properties>
 
 
@@ -23,6 +29,18 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- annotations from the Checker Framework: nullness, interning, locking, ... -->
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker-qual</artifactId>
+            <version>${checkerFrameworkVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.checkerframework</groupId>
+            <artifactId>checker</artifactId>
+            <version>${checkerFrameworkVersion}</version>
         </dependency>
     </dependencies>
 
@@ -36,6 +54,13 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <fork>true</fork>
+                    <showWarnings>true</showWarnings>
+                    <annotationProcessors>
+                        <!-- Add all the checkers you want to enable here -->
+                        <annotationProcessor>org.checkerframework.checker.nullness.NullnessChecker</annotationProcessor>
+                    </annotationProcessors>
+
                 </configuration>
             </plugin>
 
@@ -86,30 +111,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-
-            <!--<plugin>-->
-            <!--<groupId>org.codehaus.mojo</groupId>-->
-            <!--<artifactId>buildnumber-maven-plugin</artifactId>-->
-            <!--<version>1.0</version>-->
-            <!--<configuration>-->
-            <!--<format>{0}-{1,date,yyyyMMdd}</format>-->
-            <!--<items>-->
-            <!--<item>${project.version}</item>-->
-            <!--<item>timestamp</item>-->
-            <!--</items>-->
-            <!--<doCheck>true</doCheck>-->
-            <!--<doUpdate>true</doUpdate>-->
-            <!--</configuration>-->
-            <!--<executions>-->
-            <!--<execution>-->
-            <!--<phase>validate</phase>-->
-            <!--<goals>-->
-            <!--<goal>create</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--</plugin>-->
 
         </plugins>
     </build>
