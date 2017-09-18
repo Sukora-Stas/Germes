@@ -1,10 +1,8 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
+import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 
 /**
@@ -32,15 +30,6 @@ public class City extends AbstractEntity {
      */
     private Set<Station> stations;
 
-    public void addStation(final Station station) {
-        if (stations == null) {
-            stations = new HashSet<>();
-        }
-        stations.add(station);
-        station.setCity(this);
-    }
-
-
     public String getName() {
         return name;
     }
@@ -66,11 +55,39 @@ public class City extends AbstractEntity {
     }
 
     public Set<Station> getStations() {
-        return Collections.unmodifiableSet(Optional.ofNullable(stations).orElse( Collections.emptySet()));
+        return CommonUtil.getSafeSet(stations);
     }
 
     public void setStations(Set<Station> stations) {
         this.stations = stations;
     }
 
+    /**
+     * Adds specified station to the city station list
+     *
+     * @param station
+     */
+    public void addStation(final Station station) {
+        Objects.requireNonNull(station, "station parameter is not initialized");
+        if (stations == null) {
+            stations = new HashSet<>();
+        }
+        stations.add(station);
+        station.setCity(this);
+    }
+
+    /**
+     * Removes specified station from city station list
+     *
+     * @param station
+     */
+    public void removeStation(Station station) {
+        Objects.requireNonNull(station, "station parameter is not initialized");
+        if (stations == null) {
+            return;
+        }
+        stations.remove(station);
+    }
+
 }
+
