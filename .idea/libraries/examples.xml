@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="examples">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://E:/downolads/Архивы/checker-framework-2.2.0/docs/examples" />
+      <root url="file://E:/downolads/Архивы/checker-framework-2.2.0/docs/examples/MavenExample/src/main/java" />
+      <root url="file://E:/downolads/Архивы/checker-framework-2.2.0/docs/examples/units-extension" />
+    </SOURCES>
+  </library>
+</component>
