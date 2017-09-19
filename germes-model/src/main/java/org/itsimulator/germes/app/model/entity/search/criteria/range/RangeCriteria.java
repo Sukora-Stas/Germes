@@ -5,6 +5,7 @@ package org.itsimulator.germes.app.model.entity.search.criteria.range;
  */
 
 
+import com.google.common.base.Preconditions;
 import org.itsimulator.germes.app.infra.exception.flow.InvalidParameterException;
 
 /**
@@ -22,12 +23,10 @@ public class RangeCriteria {
     private final int rowCount;
 
     public RangeCriteria(final int page, final int rowCount) {
-        if (page < 0) {
-            throw new InvalidParameterException("Incorrect page index:" + page);
-        }
-        if (rowCount < 0) {
-            throw new InvalidParameterException("Incorrect row count:" + rowCount);
-        }
+        Preconditions.checkArgument(page >= 0, "Incorrect page index:%s", page);
+        Preconditions.checkArgument(rowCount >= 0, "Incorrect row count:%s",
+                rowCount);
+
         this.page = page;
         this.rowCount = rowCount;
     }

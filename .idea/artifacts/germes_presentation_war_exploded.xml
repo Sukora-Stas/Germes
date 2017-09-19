@@ -6,6 +6,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="germes-presentation" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/germes-presentation/target/Germes/META-INF/MANIFEST.MF" />
