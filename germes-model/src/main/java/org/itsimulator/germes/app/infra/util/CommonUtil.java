@@ -18,7 +18,6 @@ public class CommonUtil {
 
     /**
      * Returns not-null unmodifiable copy of the source set
-     *
      * @param source
      * @return
      */
@@ -28,7 +27,6 @@ public class CommonUtil {
 
     /**
      * Returns not-null unmodifiable copy of the source list
-     *
      * @param source
      * @return
      */
@@ -37,4 +35,5 @@ public class CommonUtil {
     }
 
 }
+
 
