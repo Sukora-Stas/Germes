@@ -4,12 +4,21 @@
 	<parent>
 		<groupId>org.it-simulator</groupId>
 		<artifactId>germes</artifactId>
-		<version>0.0.6</version>
+		<version>0.0.8</version>
 	</parent>
 	<artifactId>germes-presentation</artifactId>
 	<packaging>war</packaging>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.it-simulator</groupId>
+			<artifactId>germes-service</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
+
 	<build>
+		<finalName>Germes</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -18,6 +27,37 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>http://localhost:8080/manager/text</url>
+					<username>admin</username>
+					<password>admin</password>
+					<path>/${project.build.finalName}</path>
+					<!--<server>tomcat8.5</server>-->
+					<warFile>target/${project.build.finalName}.war</warFile>
+					<update>true</update>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>redeploy</goal>
+						</goals>
+						<phase>install</phase>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.3.1.v20150714</version>
+			</plugin>
+
+
 		</plugins>
 	</build>
 </project>

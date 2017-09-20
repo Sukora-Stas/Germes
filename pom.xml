@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.it-simulator</groupId>
     <artifactId>germes</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.8</version>
     <packaging>pom</packaging>
     <modules>
         <module>germes-presentation</module>
@@ -59,41 +59,12 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.1</version>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.10</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
                 </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.7</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <url>http://localhost:8080/manager/text</url>
-                    <username>admin</username>
-                    <password>admin</password>
-                    <path>/${project.build.finalName}</path>
-                    <!--<server>tomcat8.5</server>-->
-                    <warFile>target/${project.build.finalName}.war</warFile>
-                    <update>true</update>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>redeploy</goal>
-                        </goals>
-                        <phase>install</phase>
-                    </execution>
-                </executions>
             </plugin>
 
         </plugins>

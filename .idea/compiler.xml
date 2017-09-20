@@ -13,11 +13,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="germes" target="1.7" />
+      <module name="germes" target="1.8" />
       <module name="germes-model" target="1.8" />
-      <module name="germes-persistence" target="1.7" />
-      <module name="germes-presentation" target="1.7" />
-      <module name="germes-service" target="1.7" />
+      <module name="germes-persistence" target="1.8" />
+      <module name="germes-presentation" target="1.8" />
+      <module name="germes-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
