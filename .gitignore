@@ -1,7 +1,17 @@
 .settings
+.war
 .springBeans
 bin
 target/
 .classpath
 .project
 .log
+.idea/inspectionProfiles/
+.idea/libraries/Maven__com_google_guava_guava_18_0.xml
+.idea/workspace.xml
+germes-model/src/main/resources/
+germes-model/src/test/java/org/itsimulator/germes/app/model/entity/base/
+germes-model/src/test/java/org/itsimulator/germes/app/model/entity/person/
+germes-model/src/test/java/org/itsimulator/germes/app/model/entity/transport/
+germes-model/src/test/resources/
+

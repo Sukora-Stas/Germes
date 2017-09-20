@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/germes-model/germes-model.iml" filepath="$PROJECT_DIR$/germes-model/germes-model.iml" />
       <module fileurl="file://$PROJECT_DIR$/germes-persistence/germes-persistence.iml" filepath="$PROJECT_DIR$/germes-persistence/germes-persistence.iml" />
       <module fileurl="file://$PROJECT_DIR$/germes-presentation/germes-presentation.iml" filepath="$PROJECT_DIR$/germes-presentation/germes-presentation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/germes-service/germes-service.iml" filepath="$PROJECT_DIR$/germes-service/germes-service.iml" />
     </modules>
   </component>
 </project>
