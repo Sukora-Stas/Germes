@@ -27,9 +27,12 @@ public class City extends AbstractEntity {
 
     /**
      * Set of transport stations that is linked to this
-     * loyality
+     * locality
      */
     private Set<Station> stations;
+
+    public City() {
+    }
 
     public City(final String name) {
         this.name = name;
@@ -94,5 +97,4 @@ public class City extends AbstractEntity {
     }
 
 }
-
 
