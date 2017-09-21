@@ -1,0 +1,2 @@
+13:53:13.039 DEBUG - SimpleDTOTransformer.transform: City[name=Odessa,district=None,region=Od,stations=<null>,id=1,createdAt=<null>,modifiedAt=<null>,createdBy=<null>,modifiedBy=<null>] entity
+13:53:13.041 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object

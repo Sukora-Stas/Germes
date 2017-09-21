@@ -28,6 +28,7 @@ public class Station extends AbstractEntity {
     /**
      * You shouldn't create station object directly. Use
      * {@link City} functionality instead
+     *
      * @param city
      * @param transportType
      */
@@ -68,5 +69,30 @@ public class Station extends AbstractEntity {
         return transportType;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Station station = (Station) o;
+
+        if (city != null ? !city.equals(station.city) : station.city != null) return false;
+        if (address != null ? !address.equals(station.address) : station.address != null) return false;
+        if (phone != null ? !phone.equals(station.phone) : station.phone != null) return false;
+        if (coordinate != null ? !coordinate.equals(station.coordinate) : station.coordinate != null) return false;
+        return transportType == station.transportType;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (city != null ? city.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (phone != null ? phone.hashCode() : 0);
+        result = 31 * result + (coordinate != null ? coordinate.hashCode() : 0);
+        result = 31 * result + (transportType != null ? transportType.hashCode() : 0);
+        return result;
+    }
 }
 

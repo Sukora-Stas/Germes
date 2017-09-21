@@ -72,10 +72,11 @@ public class City extends AbstractEntity {
 
     /**
      * Adds specified station to the city station list
+     *
      * @param station
      */
     public Station addStation(final TransportType transportType) {
-        if(stations == null) {
+        if (stations == null) {
             stations = new HashSet<>();
         }
         Station station = new Station(this, transportType);
@@ -86,11 +87,12 @@ public class City extends AbstractEntity {
 
     /**
      * Removes specified station from city station list
+     *
      * @param station
      */
     public void removeStation(Station station) {
         Objects.requireNonNull(station, "station parameter is not initialized");
-        if(stations == null) {
+        if (stations == null) {
             return;
         }
         stations.remove(station);
