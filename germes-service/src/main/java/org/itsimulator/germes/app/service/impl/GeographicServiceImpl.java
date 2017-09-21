@@ -14,59 +14,57 @@ import org.itsimulator.germes.app.service.GeographicService;
 
 /**
  * Default implementation of the {@link GeographicService}
- * @author Morenets
  *
+ * @author Morenets
  */
 public class GeographicServiceImpl implements GeographicService {
-	/**
-	 * Internal list of cities
-	 */
-	private final List<City> cities;
+    /**
+     * Internal list of cities
+     */
+    private final List<City> cities;
 
-	/**
-	 * Auto-increment counter for entity id generation
-	 */
-	private int counter = 0;
+    /**
+     * Auto-increment counter for entity id generation
+     */
+    private int counter = 0;
 
-	public GeographicServiceImpl() {
-		cities = new ArrayList<City>();
-	}
+    private int stationCounter = 0;
 
-	@Override
-	public List<City> findCities() {
-		return CommonUtil.getSafeList(cities);
-	}
+    public GeographicServiceImpl() {
+        cities = new ArrayList<City>();
+    }
 
-	@Override
-	public void saveCity(City city) {
-		if (!cities.contains(city)) {
-			city.setId(++counter);
-			cities.add(city);
-		}
-	}
+    @Override
+    public List<City> findCities() {
+        return CommonUtil.getSafeList(cities);
+    }
 
-	@Override
-	public Optional<City> findCitiyById(final int id) {
-		return cities.stream().filter((city) -> city.getId() == id).findFirst();
-	}
+    @Override
+    public void saveCity(City city) {
+        if (!cities.contains(city)) {
+            city.setId(++counter);
+            cities.add(city);
+        }
+        city.getStations().forEach((station) -> {
+            if (station.getId() == 0) {
+                station.setId(++stationCounter);
+            }
+        });
+    }
 
-	@Override
-	public List<Station> searchStations(final StationCriteria criteria, final RangeCriteria rangeCriteria) {
-		Stream<City> stream = cities.stream().filter(
-				(city) -> StringUtils.isEmpty(criteria.getName()) || city.getName().equals(criteria.getName()));
+    @Override
+    public Optional<City> findCitiyById(final int id) {
+        return cities.stream().filter((city) -> city.getId() == id).findFirst();
+    }
 
-		Optional<Set<Station>> stations = stream.map((city) -> city.getStations()).reduce((stations1, stations2) -> {
-			Set<Station> newStations = new HashSet<>(stations2);
-			newStations.addAll(stations1);
-			return newStations;
-		});
-		if(!stations.isPresent()) {
-			return Collections.emptyList();
-		}
-		return stations.get()
-				.stream()
-				.filter((station) -> criteria.getTransportType() == null
-						|| station.getTransportType() == criteria.getTransportType()).collect(Collectors.toList());
-	}
+    @Override
+    public List<Station> searchStations(final StationCriteria criteria, final RangeCriteria rangeCriteria) {
+        Set<Station> stations = new HashSet<>();
+        for (City city : cities) {
+            stations.addAll(city.getStations());
+        }
+
+        return stations.stream().filter((station) -> station.match(criteria)).collect(Collectors.toList());
+    }
 }
 
