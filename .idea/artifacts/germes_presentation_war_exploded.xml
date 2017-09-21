@@ -7,10 +7,10 @@
           <element id="module-output" name="germes-presentation" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="germes-service-0.1.2.jar">
+          <element id="archive" name="germes-service-0.1.3.jar">
             <element id="module-output" name="germes-service" />
           </element>
-          <element id="archive" name="germes-model-0.1.2.jar">
+          <element id="archive" name="germes-model-0.1.3.jar">
             <element id="module-output" name="germes-model" />
           </element>
           <element id="library" level="project" name="Maven: org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.19" />
@@ -43,6 +43,11 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.5.1" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.1" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.3" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.3" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.3" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.it-simulator</groupId>
     <artifactId>germes</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
     <packaging>pom</packaging>
     <modules>
         <module>germes-presentation</module>
@@ -17,11 +17,12 @@
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
         <jersey.version>2.19</jersey.version>
-        <!--<project.version>${project.version}</project.version>-->
+        <log4j.version>2.3</log4j.version>
     </properties>
 
 
     <dependencies>
+        <!--junit-->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -29,10 +30,40 @@
             <scope>test</scope>
         </dependency>
 
+        <!--guava-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>18.0</version>
+        </dependency>
+
+        <!--log4j-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.12</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!--Apache Commons Lang-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
         </dependency>
     </dependencies>
 
