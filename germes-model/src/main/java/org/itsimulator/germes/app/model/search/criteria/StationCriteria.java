@@ -1,10 +1,12 @@
-package org.itsimulator.germes.app.model.entity.search.criteria;
+package org.itsimulator.germes.app.model.search.criteria;
 
 /**
  * Created by Sukora Stas.
  */
 
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
+
+import java.util.Objects;
 
 /**
  * Filtering criteria for search stations operation
@@ -37,11 +39,11 @@ public class StationCriteria {
     }
 
     private StationCriteria(final String name) {
-        this.name = name;
+        this.name = Objects.requireNonNull(name);
     }
 
     public StationCriteria(final TransportType transportType) {
-        this.transportType = transportType;
+        this.transportType = Objects.requireNonNull(transportType);
     }
 
     public String getName() {
@@ -69,4 +71,3 @@ public class StationCriteria {
     }
 
 }
-

@@ -2,14 +2,12 @@ package org.itsimulator.germes.app.service.impl;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import org.apache.commons.lang3.StringUtils;
 import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
-import org.itsimulator.germes.app.model.entity.search.criteria.StationCriteria;
-import org.itsimulator.germes.app.model.entity.search.criteria.range.RangeCriteria;
+import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
+import org.itsimulator.germes.app.model.search.criteria.range.RangeCriteria;
 import org.itsimulator.germes.app.service.GeographicService;
 
 /**

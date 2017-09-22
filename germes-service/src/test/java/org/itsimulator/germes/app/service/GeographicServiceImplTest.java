@@ -5,8 +5,8 @@ import java.util.Optional;
 
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
-import org.itsimulator.germes.app.model.entity.search.criteria.StationCriteria;
-import org.itsimulator.germes.app.model.entity.search.criteria.range.RangeCriteria;
+import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
+import org.itsimulator.germes.app.model.search.criteria.range.RangeCriteria;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 import org.itsimulator.germes.app.service.impl.GeographicServiceImpl;
 import org.junit.Before;
@@ -110,4 +110,3 @@ public class GeographicServiceImplTest {
         assertTrue(stations.isEmpty());
     }
 }
-

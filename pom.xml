@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.it-simulator</groupId>
     <artifactId>germes</artifactId>
-    <version>0.2.2</version>
+    <version>0.2.3</version>
     <packaging>pom</packaging>
     <modules>
         <module>germes-presentation</module>
@@ -16,8 +16,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
-        <jersey.version>2.19</jersey.version>
-        <log4j.version>2.3</log4j.version>
+        <jersey.version>2.22.1</jersey.version>
+        <log4j.version>2.5</log4j.version>
         <powermock.version>1.6.4</powermock.version>
         <jmockit.version>1.21</jmockit.version>
     </properties>
@@ -68,27 +68,6 @@
             <version>3.4</version>
         </dependency>
 
-        <!--Mockito & PowerMock-->
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-module-junit4</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito</artifactId>
-            <version>${powermock.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!--JMockit-->
-        <dependency>
-            <groupId>org.jmockit</groupId>
-            <artifactId>jmockit</artifactId>
-            <version>${jmockit.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
 

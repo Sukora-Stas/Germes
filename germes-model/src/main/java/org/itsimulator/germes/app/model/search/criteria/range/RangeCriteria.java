@@ -1,4 +1,4 @@
-package org.itsimulator.germes.app.model.entity.search.criteria.range;
+package org.itsimulator.germes.app.model.search.criteria.range;
 
 /**
  * Created by Sukora Stas.
@@ -6,7 +6,6 @@ package org.itsimulator.germes.app.model.entity.search.criteria.range;
 
 
 import com.google.common.base.Preconditions;
-import org.itsimulator.germes.app.infra.exception.flow.InvalidParameterException;
 
 /**
  * Pagination parameters for data retrieval operations

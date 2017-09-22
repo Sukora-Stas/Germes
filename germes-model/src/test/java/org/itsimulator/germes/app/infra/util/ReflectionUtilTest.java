@@ -68,7 +68,7 @@ public class ReflectionUtilTest {
         assertTrue(fields.contains("baseField"));
     }
 
-    @Test(expected=InvalidParameterException.class)
+    @Test(expected = InvalidParameterException.class)
     public void copyFieldsDestinationNullFailure() {
         Source src = new Source();
         ReflectionUtil.copyFields(src, null, Collections.emptyList());

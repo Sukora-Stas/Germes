@@ -12,6 +12,7 @@ import org.glassfish.jersey.test.JerseyTest;
 import org.itsimulator.germes.app.rest.dto.CityDTO;
 import org.itsimulator.germes.app.rest.service.config.JerseyConfig;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 /**
@@ -22,8 +23,6 @@ import static org.junit.Assert.*;
 /**
  * {@link CityResourceTest} is integration test that verifies
  * {@link CityResource}
- * @author Morenets
- *
  */
 public class CityResourceTest extends JerseyTest {
     @Override

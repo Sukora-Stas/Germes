@@ -2,7 +2,7 @@ package org.itsimulator.germes.app.model.entity.geography;
 
 import org.apache.commons.lang3.StringUtils;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
-import org.itsimulator.germes.app.model.entity.search.criteria.StationCriteria;
+import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
 import java.util.Objects;
@@ -28,6 +28,7 @@ public class Station extends AbstractEntity {
     /**
      * You shouldn't create station object directly. Use
      * {@link City} functionality instead
+     *
      * @param city
      * @param transportType
      */
@@ -70,20 +71,21 @@ public class Station extends AbstractEntity {
 
     /**
      * Verifies if current station matches specified criteria
+     *
      * @param criteria
      * @return
      */
     public boolean match(final StationCriteria criteria) {
         Objects.requireNonNull(criteria, "Station criteria is not initialized");
 
-        if(!StringUtils.isEmpty(criteria.getName())) {
-            if(!city.getName().equals(criteria.getName())) {
+        if (!StringUtils.isEmpty(criteria.getName())) {
+            if (!city.getName().equals(criteria.getName())) {
                 return false;
             }
         }
 
-        if(criteria.getTransportType() != null) {
-            if(transportType != criteria.getTransportType()) {
+        if (criteria.getTransportType() != null) {
+            if (transportType != criteria.getTransportType()) {
                 return false;
             }
         }

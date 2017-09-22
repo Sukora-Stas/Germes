@@ -76,25 +76,26 @@ public abstract class AbstractEntity {
     }
 
     @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + id;
-        return result;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AbstractEntity that = (AbstractEntity) o;
+
+        if (id != that.id) return false;
+        if (createdAt != null ? !createdAt.equals(that.createdAt) : that.createdAt != null) return false;
+        if (modifiedAt != null ? !modifiedAt.equals(that.modifiedAt) : that.modifiedAt != null) return false;
+        if (createdBy != null ? !createdBy.equals(that.createdBy) : that.createdBy != null) return false;
+        return modifiedBy != null ? modifiedBy.equals(that.modifiedBy) : that.modifiedBy == null;
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        AbstractEntity other = (AbstractEntity) obj;
-        if (id != other.id)
-            return false;
-        return true;
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (createdAt != null ? createdAt.hashCode() : 0);
+        result = 31 * result + (modifiedAt != null ? modifiedAt.hashCode() : 0);
+        result = 31 * result + (createdBy != null ? createdBy.hashCode() : 0);
+        result = 31 * result + (modifiedBy != null ? modifiedBy.hashCode() : 0);
+        return result;
     }
-
 }
