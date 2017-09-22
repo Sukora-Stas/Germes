@@ -7,10 +7,10 @@
           <element id="module-output" name="germes-presentation" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="germes-service-0.2.0.jar">
+          <element id="archive" name="germes-service-0.2.1.jar">
             <element id="module-output" name="germes-service" />
           </element>
-          <element id="archive" name="germes-model-0.2.0.jar">
+          <element id="archive" name="germes-model-0.2.1.jar">
             <element id="module-output" name="germes-model" />
           </element>
           <element id="library" level="project" name="Maven: org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.19" />
@@ -25,7 +25,6 @@
           <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-utils:2.4.0-b25" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b25" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:hk2-locator:2.4.0-b25" />
-          <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.1-GA" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:osgi-resource-locator:1.0.1" />
           <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-server:2.19" />
           <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-client:2.19" />
@@ -49,6 +48,7 @@
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.3" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.3" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
         </element>
       </element>
       <element id="directory" name="META-INF">
