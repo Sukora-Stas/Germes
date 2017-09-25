@@ -1,0 +1,10 @@
+rootProject.name = 'germes'
+include ':germes-presentation'
+include ':germes-model'
+include ':germes-persistence'
+include ':germes-service'
+
+project(':germes-presentation').projectDir = "$rootDir/germes-presentation" as File
+project(':germes-model').projectDir = "$rootDir/germes-model" as File
+project(':germes-persistence').projectDir = "$rootDir/germes-persistence" as File
+project(':germes-service').projectDir = "$rootDir/germes-service" as File
