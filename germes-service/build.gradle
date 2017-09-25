@@ -1,14 +1,12 @@
-
-description = ''
 dependencies {
   compile project(':germes-model')
-    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-grizzly2-http', version:'2.22.1'
-    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version:'2.22.1'
-    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version:'2.22.1'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-web', version:'2.5'
-    testCompile group: 'org.glassfish.jersey.test-framework', name: 'jersey-test-framework-core', version:'2.22.1'
-    testCompile group: 'org.glassfish.jersey.test-framework.providers', name: 'jersey-test-framework-provider-grizzly2', version:'2.22.1'
-    testCompile group: 'org.powermock', name: 'powermock-module-junit4', version:'1.6.4'
-    testCompile group: 'org.powermock', name: 'powermock-api-mockito', version:'1.6.4'
-    testCompile group: 'org.jmockit', name: 'jmockit', version:'1.21'
+  compile 'org.glassfish.jersey.containers:jersey-container-servlet:' + jerseyVersion
+  compile 'org.glassfish.jersey.media:jersey-media-json-jackson:'  + jerseyVersion
+  compile 'org.apache.logging.log4j:log4j-web:' + log4jVersion
+  testRuntime 'org.glassfish.jersey.containers:jersey-container-grizzly2-http:' + jerseyVersion
+  testCompile 'org.glassfish.jersey.test-framework:jersey-test-framework-core:' + jerseyVersion
+  testRuntime 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:' + jerseyVersion
+  testCompile 'org.powermock:powermock-module-junit4:' + powerMockVersion
+  testCompile 'org.powermock:powermock-api-mockito:' + powerMockVersion
+  testCompile 'org.jmockit:jmockit:1.21'
 }

@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.it-simulator</groupId>
     <artifactId>germes</artifactId>
-    <version>0.2.4</version>
+    <version>0.2.5</version>
   </parent>
   <artifactId>germes-persistence</artifactId>
 </project>
