@@ -7,10 +7,10 @@
           <element id="module-output" name="germes-presentation" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="germes-service-0.2.5.jar">
+          <element id="archive" name="germes-service-0.2.6.jar">
             <element id="module-output" name="germes-service" />
           </element>
-          <element id="archive" name="germes-model-0.2.5.jar">
+          <element id="archive" name="germes-model-0.2.6.jar">
             <element id="module-output" name="germes-model" />
           </element>
           <element id="library" level="project" name="Maven: org.glassfish.jersey.containers:jersey-container-grizzly2-http:2.22.1" />
