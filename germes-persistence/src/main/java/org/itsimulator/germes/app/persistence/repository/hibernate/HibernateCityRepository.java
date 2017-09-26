@@ -2,6 +2,7 @@ package org.itsimulator.germes.app.persistence.repository.hibernate;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
@@ -27,6 +28,10 @@ public class HibernateCityRepository implements CityRepository {
     public void save(City city) {
 
         try (Session session = sessionFactory.openSession()) {
+            city.prePersist();
+            if (city.getStations() != null) {
+                city.getStations().forEach(AbstractEntity::prePersist);
+            }
             session.saveOrUpdate(city);
         }
     }

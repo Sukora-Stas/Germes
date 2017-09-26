@@ -1,5 +1,6 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
+import java.time.LocalDateTime;
 import java.util.*;
 
 import org.itsimulator.germes.app.infra.util.CommonUtil;
@@ -59,7 +60,7 @@ public class City extends AbstractEntity {
         this.district = district;
     }
 
-    @Column(name = "REGION", nullable = false, length = 32, unique = true)
+    @Column(name = "REGION", nullable = false, length = 32)
     public String getRegion() {
         return region;
     }
@@ -105,5 +106,13 @@ public class City extends AbstractEntity {
         stations.remove(station);
     }
 
+
+
+    @PrePersist
+    public void prePersist() {
+        if (getId() == 0) {
+            setCreatedAt(LocalDateTime.now());
+        }
+    }
 }
 

@@ -5,6 +5,13 @@ package org.itsimulator.germes.app.persistence.hibernate;
  */
 
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+import javax.annotation.PreDestroy;
+import javax.persistence.PersistenceException;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -15,7 +22,6 @@ import org.itsimulator.germes.app.model.entity.geography.Coordinate;
 import org.itsimulator.germes.app.model.entity.geography.Station;
 import org.itsimulator.germes.app.model.entity.person.Account;
 
-import javax.annotation.PreDestroy;
 
 /**
  * Component that is responsible for managing
@@ -27,7 +33,8 @@ public class SessionFactoryBuilder {
     private final SessionFactory sessionFactory;
 
     public SessionFactoryBuilder() {
-        ServiceRegistry registry = new StandardServiceRegistryBuilder().build();
+
+        ServiceRegistry registry = new StandardServiceRegistryBuilder().applySettings(loadProperties()).build();
 
         MetadataSources sources = new MetadataSources(registry);
 
@@ -38,6 +45,19 @@ public class SessionFactoryBuilder {
         sources.addAnnotatedClass(Account.class);
 
         sessionFactory = sources.buildMetadata().buildSessionFactory();
+    }
+
+    private Properties loadProperties() {
+        try {
+            InputStream in = SessionFactoryBuilder.class.getClassLoader().getResourceAsStream("application.properties");
+            Properties properties = new Properties();
+
+            properties.load(in);
+
+            return properties;
+        } catch (IOException e) {
+            throw new PersistenceException(e);
+        }
     }
 
     /**
