@@ -1,17 +1,73 @@
 .settings
 .war
+.jar
 .springBeans
 bin
 target/
 .classpath
 .project
 .log
+build/
 .idea/inspectionProfiles/
 .idea/workspace.xml
 .idea/libraries/
 germes-model/src/main/resources/
-germes-model/src/test/java/org/itsimulator/germes/app/model/entity/base/
-germes-model/src/test/java/org/itsimulator/germes/app/model/entity/person/
-germes-model/src/test/java/org/itsimulator/germes/app/model/entity/transport/
+/germes-model/.war
+/germes-persistence/.war
 germes-model/src/test/resources/
 lib
+/germes-model/build/
+/germes-persistence/build/
+/germes-service/build/
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+### Maven template
+
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
+!/.mvn/wrapper/maven-wrapper.jar
+### Gradle template
+.gradle
+/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+

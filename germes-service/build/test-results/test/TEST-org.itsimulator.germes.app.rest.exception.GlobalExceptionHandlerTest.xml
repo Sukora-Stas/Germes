@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.itsimulator.germes.app.rest.exception.GlobalExceptionHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-09-26T09:28:24" hostname="DESKTOP-L817D7D" time="0.463">
+<testsuite name="org.itsimulator.germes.app.rest.exception.GlobalExceptionHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-09-26T10:15:04" hostname="DESKTOP-L817D7D" time="0.415">
   <properties/>
-  <testcase name="testToResponseReturnServerError" classname="org.itsimulator.germes.app.rest.exception.GlobalExceptionHandlerTest" time="0.463"/>
-  <system-out><![CDATA[12:28:24.832 ERROR - test
+  <testcase name="testToResponseReturnServerError" classname="org.itsimulator.germes.app.rest.exception.GlobalExceptionHandlerTest" time="0.415"/>
+  <system-out><![CDATA[13:15:05.340 ERROR - test
 java.lang.Exception: test
 	at org.itsimulator.germes.app.rest.exception.GlobalExceptionHandlerTest.testToResponseReturnServerError(GlobalExceptionHandlerTest.java:29) [test/:?]
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_144]

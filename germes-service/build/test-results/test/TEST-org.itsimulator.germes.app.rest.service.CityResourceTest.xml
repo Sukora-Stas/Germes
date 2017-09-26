@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.itsimulator.germes.app.rest.service.CityResourceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-09-26T09:28:24" hostname="DESKTOP-L817D7D" time="1.22">
+<testsuite name="org.itsimulator.germes.app.rest.service.CityResourceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-09-26T10:15:05" hostname="DESKTOP-L817D7D" time="1.134">
   <properties/>
-  <testcase name="testFindCityByIdNotFound" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.677"/>
-  <testcase name="testSaveCitySuccess" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.282"/>
-  <testcase name="testFindCityByIdInvalidId" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.076"/>
-  <testcase name="testFindCitiesSuccess" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.101"/>
+  <testcase name="testFindCityByIdNotFound" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.622"/>
+  <testcase name="testSaveCitySuccess" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.269"/>
+  <testcase name="testFindCityByIdInvalidId" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.071"/>
+  <testcase name="testFindCitiesSuccess" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.087"/>
   <testcase name="testFindCityByIdSuccess" classname="org.itsimulator.germes.app.rest.service.CityResourceTest" time="0.081"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[сен 26, 2017 12:28:24 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+  <system-err><![CDATA[сен 26, 2017 1:15:05 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
 INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener start
+сен 26, 2017 1:15:05 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.HttpServer start
+сен 26, 2017 1:15:05 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer] Started.
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+сен 26, 2017 1:15:06 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
 INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.HttpServer start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer-1] Started.
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+сен 26, 2017 1:15:06 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
 INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.HttpServer start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer-2] Started.
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+сен 26, 2017 1:15:06 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
 INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.NetworkListener start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:9998]
-сен 26, 2017 12:28:25 PM org.glassfish.grizzly.http.server.HttpServer start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer-3] Started.
-сен 26, 2017 12:28:26 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:9998]
-сен 26, 2017 12:28:26 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
+сен 26, 2017 1:15:06 PM org.glassfish.jersey.test.grizzly.GrizzlyTestContainerFactory$GrizzlyTestContainer <init>
 INFO: Creating GrizzlyTestContainer configured at the base URI http://localhost:9998/
-сен 26, 2017 12:28:26 PM org.glassfish.grizzly.http.server.NetworkListener start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener start
 INFO: Started listener bound to [localhost:9998]
-сен 26, 2017 12:28:26 PM org.glassfish.grizzly.http.server.HttpServer start
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.HttpServer start
 INFO: [HttpServer-4] Started.
-сен 26, 2017 12:28:26 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
+сен 26, 2017 1:15:06 PM org.glassfish.grizzly.http.server.NetworkListener shutdownNow
 INFO: Stopped listener bound to [localhost:9998]
 ]]></system-err>
 </testsuite>

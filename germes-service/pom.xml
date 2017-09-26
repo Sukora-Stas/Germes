@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.it-simulator</groupId>
 		<artifactId>germes</artifactId>
-		<version>0.2.8</version>
+		<version>0.2.9</version>
 	</parent>
 	<artifactId>germes-service</artifactId>
 
@@ -24,6 +24,11 @@
 		<dependency>
 			<groupId>org.it-simulator</groupId>
 			<artifactId>germes-model</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.it-simulator</groupId>
+			<artifactId>germes-persistence</artifactId>
 			<version>${project.parent.version}</version>
 		</dependency>
 		<dependency>
@@ -77,5 +82,6 @@
 			<version>${jmockit.version}</version>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 </project>
