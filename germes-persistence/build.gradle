@@ -1,3 +1,5 @@
 dependencies {
     compile project(':germes-model')
+    testCompile 'org.hibernate:hibernate-tools:4.3.2.Final'
+    runtime 'org.hibernate:hibernate-java8:' + hibernateVersion
 }
