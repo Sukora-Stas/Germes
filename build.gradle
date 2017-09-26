@@ -3,7 +3,7 @@ allprojects {
     apply plugin: 'eclipse'
 
     group = 'org.it-simulator'
-    version = '0.2.6'
+    version = '0.2.7'
 }
 
 subprojects {
@@ -14,6 +14,7 @@ subprojects {
         junitVersion = '4.12'
         jerseyVersion = '2.22.1'
         powerMockVersion = '1.6.4'
+        hibernateVersion = '5.1.0.Final'
     }
 
     apply plugin: 'java'
