@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.itsimulator.germes.app.infra.util.ChecksTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-09-26T09:28:21" hostname="DESKTOP-L817D7D" time="0.003">
+  <properties/>
+  <testcase name="testCheckParameterNoException" classname="org.itsimulator.germes.app.infra.util.ChecksTest" time="0.002"/>
+  <testcase name="testCheckParameterGetException" classname="org.itsimulator.germes.app.infra.util.ChecksTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
