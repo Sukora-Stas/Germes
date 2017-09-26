@@ -2,4 +2,6 @@ dependencies {
     compile project(':germes-model')
     testCompile 'org.hibernate:hibernate-tools:4.3.2.Final'
     runtime 'org.hibernate:hibernate-java8:' + hibernateVersion
+
+    compile 'org.glassfish.hk2.external:javax.inject:2.4.0-b31'
 }
