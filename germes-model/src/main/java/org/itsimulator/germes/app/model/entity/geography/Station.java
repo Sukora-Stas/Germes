@@ -5,12 +5,16 @@ import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Objects;
 
 /**
  * Station where passengers can get off or take specific kind
  * of transport. Multiple stationts compose route of the trip.
  */
+@Table(name = "STATION")
+@Entity
 public class Station extends AbstractEntity {
     private City city;
 

@@ -6,11 +6,16 @@ import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * Any locality that contains transport stations
  *
  * @author admin
  */
+@Table(name = "CITY")
+@Entity
 public class City extends AbstractEntity {
     private String name;
 

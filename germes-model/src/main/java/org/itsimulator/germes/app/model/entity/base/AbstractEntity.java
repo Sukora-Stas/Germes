@@ -4,11 +4,14 @@ import java.time.LocalDateTime;
 
 import org.itsimulator.germes.app.model.entity.person.Account;
 
+import javax.persistence.MappedSuperclass;
+
 /**
  * Base class for all business entities
  *
  * @author admin
  */
+@MappedSuperclass
 public abstract class AbstractEntity {
     /**
      * Unique entity identifier

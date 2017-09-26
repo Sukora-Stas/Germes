@@ -1,10 +1,13 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
+import javax.persistence.Embeddable;
+
 /**
  * Geographical coordinate of an object
  *
  * @author admin
  */
+@Embeddable
 public class Coordinate {
     private double x;
 
