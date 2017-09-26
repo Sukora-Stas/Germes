@@ -11,6 +11,8 @@ import org.itsimulator.germes.app.persistence.repository.CityRepository;
 import org.itsimulator.germes.app.persistence.repository.inmemory.InMemoryCityRepository;
 import org.itsimulator.germes.app.service.GeographicService;
 
+import javax.inject.Inject;
+
 /**
  * Default implementation of the {@link GeographicService}
  *
@@ -19,8 +21,9 @@ import org.itsimulator.germes.app.service.GeographicService;
 public class GeographicServiceImpl implements GeographicService {
     private final CityRepository cityRepository;
 
-    public GeographicServiceImpl() {
-        cityRepository = new InMemoryCityRepository();
+    @Inject
+    public GeographicServiceImpl(CityRepository cityRepository) {
+        this.cityRepository = cityRepository;
     }
 
     @Override

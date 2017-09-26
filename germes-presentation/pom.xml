@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.it-simulator</groupId>
 		<artifactId>germes</artifactId>
-		<version>0.2.9</version>
+		<version>0.3.0</version>
 	</parent>
 	<artifactId>germes-presentation</artifactId>
 	<packaging>war</packaging>
