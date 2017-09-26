@@ -1,5 +1,6 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
@@ -21,6 +22,7 @@ public class Address {
      */
     private String apartment;
 
+    @Column(name = "ZIP_CODE", length = 10)
     public String getZipCode() {
         return zipCode;
     }
@@ -29,6 +31,7 @@ public class Address {
         this.zipCode = zipCode;
     }
 
+    @Column(name = "STREET", length = 32)
     public String getStreet() {
         return street;
     }
@@ -37,6 +40,7 @@ public class Address {
         this.street = street;
     }
 
+    @Column(name = "HOUSE_NO", length = 16)
     public String getHouseNo() {
         return houseNo;
     }
@@ -45,6 +49,7 @@ public class Address {
         this.houseNo = houseNo;
     }
 
+    @Column(name = "APARTMENT", length = 16)
     public String getApartment() {
         return apartment;
     }
@@ -54,4 +59,3 @@ public class Address {
     }
 
 }
-

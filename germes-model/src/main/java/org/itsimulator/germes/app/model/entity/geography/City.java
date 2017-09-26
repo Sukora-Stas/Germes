@@ -6,8 +6,7 @@ import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Any locality that contains transport stations
@@ -25,14 +24,13 @@ public class City extends AbstractEntity {
     private String district;
 
     /**
-     * Name of the region where district is located.
-     * Region is top-level area in the country
+     * Name of the region where district is located. Region is top-level area in
+     * the country
      */
     private String region;
 
     /**
-     * Set of transport stations that is linked to this
-     * locality
+     * Set of transport stations that is linked to this locality
      */
     private Set<Station> stations;
 
@@ -43,6 +41,7 @@ public class City extends AbstractEntity {
         this.name = name;
     }
 
+    @Column(name = "NAME", nullable = false, length = 32)
     public String getName() {
         return name;
     }
@@ -51,6 +50,7 @@ public class City extends AbstractEntity {
         this.name = name;
     }
 
+    @Column(name = "DISTRICT", nullable = false, length = 32)
     public String getDistrict() {
         return district;
     }
@@ -59,6 +59,7 @@ public class City extends AbstractEntity {
         this.district = district;
     }
 
+    @Column(name = "REGION", nullable = false, length = 32, unique = true)
     public String getRegion() {
         return region;
     }
@@ -67,6 +68,7 @@ public class City extends AbstractEntity {
         this.region = region;
     }
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "city", orphanRemoval = true)
     public Set<Station> getStations() {
         return CommonUtil.getSafeSet(stations);
     }
