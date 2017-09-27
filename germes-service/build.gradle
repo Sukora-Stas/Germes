@@ -11,4 +11,8 @@ dependencies {
     testCompile 'org.powermock:powermock-module-junit4:' + powerMockVersion
     testCompile 'org.powermock:powermock-api-mockito:' + powerMockVersion
     testCompile 'org.jmockit:jmockit:1.21'
+
+    testRuntime 'org.hsqldb:hsqldb:2.3.3'
+    testRuntime 'org.xerial:sqlite-jdbc:3.8.11.2'
+    testRuntime 'org.apache.derby:derby:10.12.1.1'
 }
