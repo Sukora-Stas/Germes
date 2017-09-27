@@ -19,7 +19,9 @@ public class ValidationException extends FlowException {
     private static final long serialVersionUID = 7323772364690687219L;
 
     public <T> ValidationException(String message, Set<ConstraintViolation<T>> constraints) {
-        super(message + ":" + constraints.stream().map(ConstraintViolation::getMessage).collect(Collectors.joining(",")));
+        super(message + ":"
+                + constraints.stream().map(constraint -> constraint.getPropertyPath() + ":" + constraint.getMessage())
+                .collect(Collectors.joining(",")));
     }
 
 }
