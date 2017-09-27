@@ -17,6 +17,8 @@ import javax.persistence.*;
 @Table(name = "CITY")
 @Entity
 public class City extends AbstractEntity {
+    public static final String FIELD_NAME = "name";
+
     private String name;
 
     /**
