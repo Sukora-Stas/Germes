@@ -1,13 +1,21 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
-import java.time.LocalDateTime;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
-
-import javax.persistence.*;
 
 /**
  * Any locality that contains transport stations
@@ -44,6 +52,8 @@ public class City extends AbstractEntity {
         this.name = name;
     }
 
+    @NotNull
+    @Size(min = 2, max = 32)
     @Column(name = "NAME", nullable = false, length = 32)
     public String getName() {
         return name;
@@ -108,13 +118,4 @@ public class City extends AbstractEntity {
         stations.remove(station);
     }
 
-
-
-    @PrePersist
-    public void prePersist() {
-        if (getId() == 0) {
-            setCreatedAt(LocalDateTime.now());
-        }
-    }
 }
-
