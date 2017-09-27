@@ -4,4 +4,5 @@ dependencies {
     runtime 'org.hibernate:hibernate-java8:' + hibernateVersion
 
     compile 'org.glassfish.hk2.external:javax.inject:2.4.0-b31'
+    compile 'org.reflections:reflections:0.9.10'
 }

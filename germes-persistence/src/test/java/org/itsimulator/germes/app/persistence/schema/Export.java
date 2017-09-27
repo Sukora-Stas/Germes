@@ -5,21 +5,19 @@ package org.itsimulator.germes.app.persistence.schema;
  */
 
 
-import com.google.common.collect.Sets;
+import java.util.Set;
+
+import javax.persistence.Entity;
+
+import java.util.EnumSet;
+
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.dialect.Dialect;
 import org.hibernate.dialect.MySQL5Dialect;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.hibernate.tool.schema.TargetType;
-import org.itsimulator.germes.app.model.entity.geography.Address;
-import org.itsimulator.germes.app.model.entity.geography.City;
-import org.itsimulator.germes.app.model.entity.geography.Coordinate;
-import org.itsimulator.germes.app.model.entity.geography.Station;
-import org.itsimulator.germes.app.model.entity.person.Account;
-
-import java.util.EnumSet;
-import java.util.Set;
+import org.reflections.Reflections;
 
 /**
  * {@link Export} dynamically generates SQL schema
@@ -36,8 +34,9 @@ public class Export {
         MetadataSources metadata = new MetadataSources(
                 new StandardServiceRegistryBuilder().applySetting("hibernate.dialect", dialect.getName()).build());
 
-        Set<Class<?>> entityClasses = Sets.newHashSet(City.class, Address.class, Station.class, Coordinate.class,
-                Account.class);
+        Reflections reflections = new Reflections("org.itsimulator.germes.app.model.entity");
+
+        Set<Class<?>> entityClasses = reflections.getTypesAnnotatedWith(Entity.class);
         entityClasses.forEach(metadata::addAnnotatedClass);
 
         SchemaExport schema = new SchemaExport();
