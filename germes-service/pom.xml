@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.it-simulator</groupId>
         <artifactId>germes</artifactId>
-        <version>0.4.4</version>
+        <version>0.4.5</version>
     </parent>
     <artifactId>germes-service</artifactId>
 
@@ -109,6 +109,13 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.8.11.2</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.39</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>
