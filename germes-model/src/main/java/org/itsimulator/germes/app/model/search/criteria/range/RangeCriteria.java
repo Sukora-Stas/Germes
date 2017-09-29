@@ -6,6 +6,7 @@ package org.itsimulator.germes.app.model.search.criteria.range;
 
 
 import com.google.common.base.Preconditions;
+import org.itsimulator.germes.app.infra.util.Checks;
 
 /**
  * Pagination parameters for data retrieval operations
@@ -17,14 +18,14 @@ public class RangeCriteria {
     private final int page;
 
     /**
-     * Number of elements per page
+     * Number of elements per page. Zero means that we should return all the
+     * elements
      */
     private final int rowCount;
 
     public RangeCriteria(final int page, final int rowCount) {
-        Preconditions.checkArgument(page >= 0, "Incorrect page index:%s", page);
-        Preconditions.checkArgument(rowCount >= 0, "Incorrect row count:%s",
-                rowCount);
+        Checks.checkParameter(page >= 0, "Incorrect page index:" + page);
+        Checks.checkParameter(rowCount >= 0, "Incorrect row count:" + rowCount);
 
         this.page = page;
         this.rowCount = rowCount;

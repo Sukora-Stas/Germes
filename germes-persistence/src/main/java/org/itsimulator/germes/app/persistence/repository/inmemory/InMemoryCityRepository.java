@@ -59,4 +59,10 @@ public class InMemoryCityRepository implements CityRepository {
     public City findById(final int id) {
         return cities.stream().filter(city -> city.getId() == id).findFirst().orElse(null);
     }
+
+    @Override
+    public void deleteAll() {
+        cities.clear();
+    }
+
 }

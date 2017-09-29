@@ -131,5 +131,3 @@ public class ReflectionUtil {
         throw new ConfigurationException("No field " + name + " in the class " + clz);
     }
 }
-
-

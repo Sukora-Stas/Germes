@@ -65,5 +65,3 @@ public class SimpleDTOTransformer implements Transformer {
         return entity;
     }
 }
-
-

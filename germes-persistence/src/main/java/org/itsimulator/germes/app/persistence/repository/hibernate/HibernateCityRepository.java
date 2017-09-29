@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -65,4 +66,28 @@ public class HibernateCityRepository implements CityRepository {
             return session.createCriteria(City.class).list();
         }
     }
+
+    @Override
+    public void deleteAll() {
+        try (Session session = sessionFactory.openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                Query stationQuery = session.createQuery("delete from Station");
+                stationQuery.executeUpdate();
+
+                Query query = session.createQuery("delete from City");
+                int deleted = query.executeUpdate();
+                LOGGER.debug("Deleted {} cities", deleted);
+
+                tx.commit();
+            } catch (Exception ex) {
+                LOGGER.error(ex.getMessage(), ex);
+                if (tx != null) {
+                    tx.rollback();
+                }
+            }
+        }
+    }
+
 }

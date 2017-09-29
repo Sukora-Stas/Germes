@@ -17,6 +17,7 @@ public interface StationRepository {
 
     /**
      * Returns all the stations that match specified criteria
+     *
      * @param stationCriteria
      * @return
      */

@@ -43,4 +43,9 @@ public interface CityRepository {
      */
     List<City> findAll();
 
+    /**
+     * Deletes all the cities
+     */
+    void deleteAll();
+
 }

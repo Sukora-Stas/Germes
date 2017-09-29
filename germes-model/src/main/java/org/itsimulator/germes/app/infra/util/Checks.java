@@ -15,7 +15,6 @@ public class Checks {
 
     /**
      * Verifies that specified check passed and throws exception otherwise
-     *
      * @param check
      * @param message
      * @throws InvalidParameterException
@@ -27,3 +26,4 @@ public class Checks {
         }
     }
 }
+

@@ -53,5 +53,3 @@ public class CommonUtil {
                 ToStringStyle.SHORT_PREFIX_STYLE);
     }
 }
-
-

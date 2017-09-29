@@ -16,4 +16,3 @@ public class FieldProvider {
         return ReflectionUtil.findSimilarFields(source, dest);
     }
 }
-
