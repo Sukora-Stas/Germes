@@ -1,5 +1,6 @@
 germes-presentation.iml
 pom.xml.versionsBackup
+bower_components
 .settings
 .war
 .jar
