@@ -20,17 +20,15 @@ import org.itsimulator.germes.app.persistence.repository.hibernate.HibernateCity
 import org.itsimulator.germes.app.persistence.repository.hibernate.HibernateStationRepository;
 import org.itsimulator.germes.app.service.impl.GeographicServiceImpl;
 import org.junit.AfterClass;
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import static org.junit.Assert.*;
-
 /**
  * Contain unit-tests for {@link GeographicServiceImpl}
+ *
  */
 public class GeographicServiceImplTest {
     private static final int DEFAULT_CITY_ID = 1;
@@ -165,6 +163,26 @@ public class GeographicServiceImplTest {
 
         List<City> cities = service.findCities();
         assertEquals(cities.size(), cityCount + addedCount);
+    }
+
+    @Test
+    public void testSaveMultipleCitiesInBatchSuccess() {
+        int cityCount = service.findCities().size();
+        int addedCount = 5_000;
+
+        List<City> cities = new ArrayList<>(addedCount);
+
+        for (int i = 0; i < addedCount; i++) {
+            City city = new City("Odessa" + i);
+            city.setDistrict("Odessa");
+            city.setRegion("Odessa");
+            city.addStation(TransportType.AUTO);
+            cities.add(city);
+        }
+        service.saveCities(cities);
+
+        List<City> allCities = service.findCities();
+        assertEquals(allCities.size(), cityCount + addedCount);
     }
 
     @Test

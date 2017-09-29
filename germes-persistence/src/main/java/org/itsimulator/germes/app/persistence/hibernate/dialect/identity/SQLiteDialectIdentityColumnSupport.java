@@ -2,9 +2,6 @@ package org.itsimulator.germes.app.persistence.hibernate.dialect.identity;
 
 import org.hibernate.dialect.identity.IdentityColumnSupportImpl;
 
-/**
- * Created by Sukora Stas.
- */
 public class SQLiteDialectIdentityColumnSupport extends IdentityColumnSupportImpl {
     @Override
     public boolean supportsIdentityColumns() {

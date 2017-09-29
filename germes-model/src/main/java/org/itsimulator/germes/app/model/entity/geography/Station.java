@@ -29,7 +29,7 @@ public class Station extends AbstractEntity {
 
     public static final String FIELD_CITY = "city";
 
-    public static final String QUERY_DELETE_ALL = "Station.deleteStations";
+    public static final String QUERY_DELETE_ALL = "deleteStations";
 
     private City city;
 
@@ -48,8 +48,8 @@ public class Station extends AbstractEntity {
     }
 
     /**
-     * You shouldn't create station object directly. Use
-     * {@link City} functionality instead
+     * You shouldn't create station object directly. Use {@link City}
+     * functionality instead
      *
      * @param city
      * @param transportType

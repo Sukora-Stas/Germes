@@ -15,7 +15,6 @@ import java.util.List;
 public interface CityRepository {
     /**
      * Saves(creates or modifies) specified city instance
-     *
      * @param city
      */
     void save(City city);
@@ -23,7 +22,6 @@ public interface CityRepository {
     /**
      * Returns city with specified identifier. If no city exists with such identifier
      * then null is returned
-     *
      * @param cityId
      * @return
      */
@@ -31,14 +29,12 @@ public interface CityRepository {
 
     /**
      * Delete city with specified identifier
-     *
      * @param cityId
      */
     void delete(int cityId);
 
     /**
      * Returns all the cities
-     *
      * @return
      */
     List<City> findAll();
@@ -47,5 +43,11 @@ public interface CityRepository {
      * Deletes all the cities
      */
     void deleteAll();
+
+    /**
+     * Saves specified city instances
+     * @param cities
+     */
+    void saveAll(List<City> cities);
 
 }
