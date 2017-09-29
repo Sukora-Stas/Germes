@@ -74,6 +74,7 @@ public class GeographicServiceImplTest {
     }
 
     @Test
+    @Ignore
     public void testFindCityByIdSuccess() {
         City city = createCity();
         service.saveCity(city);

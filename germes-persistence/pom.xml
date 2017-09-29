@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.it-simulator</groupId>
         <artifactId>germes</artifactId>
-        <version>0.4.7</version>
+        <version>0.4.8</version>
     </parent>
     <artifactId>germes-persistence</artifactId>
 
@@ -42,9 +42,9 @@
             <version>0.9.10</version>
         </dependency>
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-c3p0</artifactId>
-            <version>${hibernate.version}</version>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>2.4.6</version>
         </dependency>
     </dependencies>
 

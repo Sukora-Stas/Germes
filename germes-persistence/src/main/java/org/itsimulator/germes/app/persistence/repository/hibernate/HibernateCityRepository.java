@@ -76,9 +76,11 @@ public class HibernateCityRepository implements CityRepository {
                 tx = session.beginTransaction();
                 Query stationQuery = session.getNamedQuery(Station.QUERY_DELETE_ALL);
                 stationQuery.executeUpdate();
+
                 Query query = session.getNamedQuery(City.QUERY_DELETE_ALL);
                 int deleted = query.executeUpdate();
                 LOGGER.debug("Deleted {} cities", deleted);
+
                 tx.commit();
             } catch (Exception ex) {
                 LOGGER.error(ex.getMessage(), ex);
@@ -88,4 +90,5 @@ public class HibernateCityRepository implements CityRepository {
             }
         }
     }
+
 }

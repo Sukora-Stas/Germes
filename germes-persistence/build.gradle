@@ -5,5 +5,5 @@ dependencies {
 
     compile 'org.glassfish.hk2.external:javax.inject:2.4.0-b31'
     compile 'org.reflections:reflections:0.9.10'
-    runtime 'org.hibernate:hibernate-c3p0:' + hibernateVersion
+    compile 'com.zaxxer:HikariCP:2.4.6'
 }
