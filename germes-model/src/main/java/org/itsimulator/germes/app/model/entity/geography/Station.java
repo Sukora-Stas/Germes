@@ -1,12 +1,21 @@
 package org.itsimulator.germes.app.model.entity.geography;
 
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
 import org.apache.commons.lang3.StringUtils;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
-import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
-
-import javax.persistence.*;
-import java.util.Objects;
+import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 
 /**
  * Station where passengers can get off or take specific kind
@@ -14,10 +23,13 @@ import java.util.Objects;
  */
 @Table(name = "STATION")
 @Entity
+@NamedQuery(name = Station.QUERY_DELETE_ALL, query = "delete from Station")
 public class Station extends AbstractEntity {
     public static final String FIELD_TRANSPORT_TYPE = "transportType";
 
     public static final String FIELD_CITY = "city";
+
+    public static final String QUERY_DELETE_ALL = "Station.deleteStations";
 
     private City city;
 

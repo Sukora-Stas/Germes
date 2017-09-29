@@ -8,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -24,8 +25,12 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
  */
 @Table(name = "CITY")
 @Entity
+@NamedQuery(name = City.QUERY_DELETE_ALL, query = "delete from City")
 public class City extends AbstractEntity {
+
     public static final String FIELD_NAME = "name";
+
+    public static final String QUERY_DELETE_ALL = "City.deleteAll";
 
     private String name;
 

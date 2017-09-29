@@ -9,6 +9,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.itsimulator.germes.app.model.entity.geography.City;
+import org.itsimulator.germes.app.model.entity.geography.Station;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
 import org.slf4j.Logger;
@@ -73,13 +74,11 @@ public class HibernateCityRepository implements CityRepository {
             Transaction tx = null;
             try {
                 tx = session.beginTransaction();
-                Query stationQuery = session.createQuery("delete from Station");
+                Query stationQuery = session.getNamedQuery(Station.QUERY_DELETE_ALL);
                 stationQuery.executeUpdate();
-
-                Query query = session.createQuery("delete from City");
+                Query query = session.getNamedQuery(City.QUERY_DELETE_ALL);
                 int deleted = query.executeUpdate();
                 LOGGER.debug("Deleted {} cities", deleted);
-
                 tx.commit();
             } catch (Exception ex) {
                 LOGGER.error(ex.getMessage(), ex);
@@ -89,5 +88,4 @@ public class HibernateCityRepository implements CityRepository {
             }
         }
     }
-
 }
