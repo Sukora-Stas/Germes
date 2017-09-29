@@ -7,5 +7,17 @@
 <script src="bower_components/angular/angular.js"></script>
 <body>
 <div ng-bind="'Germes project'"></div>
+<table style="width: 100%">
+    <tr>
+        <th>Name</th>
+        <th>District</th>
+        <th>Region</th>
+    </tr>
+    <tr ng-repeat="city in cities">
+        <td ng-bind="city.name"></td>
+        <td ng-bind="city.district"></td>
+        <td ng-bind="city.region"></td>
+    </tr>
+</table>
 </body>
 </html>
