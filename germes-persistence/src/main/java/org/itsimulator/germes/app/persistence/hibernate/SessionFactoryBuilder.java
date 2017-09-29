@@ -1,9 +1,5 @@
 package org.itsimulator.germes.app.persistence.hibernate;
 
-/**
- * Created by Sukora Stas.
- */
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -20,12 +16,8 @@ import org.hibernate.service.ServiceRegistry;
 import org.itsimulator.germes.app.persistence.hibernate.interceptor.TimestampInterceptor;
 import org.reflections.Reflections;
 
-
 /**
- * Component that is responsible for managing
- * Hibernate session factory
- *
- * @author Morenets
+ * Component that is responsible for managing Hibernate session factory
  */
 public class SessionFactoryBuilder {
     private final SessionFactory sessionFactory;

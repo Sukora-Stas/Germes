@@ -15,11 +15,6 @@ import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
 import org.itsimulator.germes.app.persistence.repository.StationRepository;
 
-/**
- * Created by Sukora Stas.
- */
-
-
 public class HibernateStationRepository implements StationRepository {
 
     private final SessionFactory sessionFactory;
@@ -46,5 +41,4 @@ public class HibernateStationRepository implements StationRepository {
             return criteria.list();
         }
     }
-
 }

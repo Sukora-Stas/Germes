@@ -4,7 +4,6 @@ package org.itsimulator.germes.app.config;
  * Created by Sukora Stas.
  */
 
-
 import javax.inject.Singleton;
 
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
@@ -13,7 +12,6 @@ import org.itsimulator.germes.app.persistence.repository.CityRepository;
 import org.itsimulator.germes.app.persistence.repository.StationRepository;
 import org.itsimulator.germes.app.persistence.repository.hibernate.HibernateCityRepository;
 import org.itsimulator.germes.app.persistence.repository.hibernate.HibernateStationRepository;
-import org.itsimulator.germes.app.persistence.repository.inmemory.InMemoryCityRepository;
 import org.itsimulator.germes.app.service.GeographicService;
 import org.itsimulator.germes.app.service.impl.GeographicServiceImpl;
 import org.itsimulator.germes.app.service.transform.Transformer;

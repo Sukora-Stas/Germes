@@ -5,16 +5,15 @@ package org.itsimulator.germes.app.infra.util;
  */
 
 
-import jdk.nashorn.internal.ir.annotations.Ignore;
-import org.itsimulator.germes.app.infra.exception.ConfigurationException;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
+import org.itsimulator.germes.app.infra.exception.ConfigurationException;
+import org.itsimulator.germes.app.infra.util.annotation.Ignore;
 
 /**
  * Contains reflection-related utility operations

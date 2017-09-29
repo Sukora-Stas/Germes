@@ -19,4 +19,3 @@ public class JerseyConfig extends ResourceConfig {
         packages("org.itsimulator.germes.app.rest");
     }
 }
-

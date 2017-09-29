@@ -1,9 +1,9 @@
 package org.itsimulator.germes.app.infra.util;
 
+import static org.junit.Assert.*;
+
 import org.itsimulator.germes.app.infra.exception.flow.InvalidParameterException;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by Sukora Stas.

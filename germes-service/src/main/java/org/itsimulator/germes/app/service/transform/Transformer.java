@@ -16,7 +16,6 @@ public interface Transformer {
 
     /**
      * Converts specified entity into DTO object
-     *
      * @param entity
      * @param clz
      * @return
@@ -25,7 +24,6 @@ public interface Transformer {
 
     /**
      * Converts specified DTO object into business entity
-     *
      * @param dto
      * @param clz
      * @return
@@ -33,4 +31,3 @@ public interface Transformer {
     <T extends AbstractEntity, P extends BaseDTO<T>> T untransform(P dto, Class<T> clz);
 
 }
-

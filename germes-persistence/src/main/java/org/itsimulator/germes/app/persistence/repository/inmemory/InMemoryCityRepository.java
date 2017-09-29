@@ -4,14 +4,12 @@ package org.itsimulator.germes.app.persistence.repository.inmemory;
  * Created by Sukora Stas.
  */
 
+import java.util.ArrayList;
+import java.util.List;
 
 import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * In-memory implementation of the {@link CityRepository} that stores
  * data in the RAM

@@ -28,7 +28,6 @@ import static org.junit.Assert.*;
 
 /**
  * Contain unit-tests for {@link GeographicServiceImpl}
- *
  */
 public class GeographicServiceImplTest {
     private static final int DEFAULT_CITY_ID = 1;

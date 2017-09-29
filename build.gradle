@@ -3,7 +3,7 @@ allprojects {
     apply plugin: 'eclipse'
 
     group = 'org.it-simulator'
-    version = '0.4.8'
+    version = '0.5.0'
 }
 
 subprojects {
@@ -37,9 +37,7 @@ subprojects {
         compile 'org.apache.commons:commons-lang3:3.4'
         testCompile 'junit:junit:' + junitVersion
     }
-
 }
-
 eclipse {
     classpath {
         downloadSources = true

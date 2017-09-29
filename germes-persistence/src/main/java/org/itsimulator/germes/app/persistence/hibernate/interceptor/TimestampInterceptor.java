@@ -14,8 +14,7 @@ import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 
 public class TimestampInterceptor extends EmptyInterceptor {
 
-
-    private static final long serialVersionUID = -7555841291657232748L;
+    private static final long serialVersionUID = 6825201844366406253L;
 
     @Override
     public boolean onSave(Object entity, Serializable id, Object[] state, String[] propertyNames, Type[] types) {

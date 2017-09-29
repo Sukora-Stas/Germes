@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * This class caches field names for each transformation pair
  */
-public class CachedFieldProvider extends FieldProvider {
+public class CachedFieldProvider extends FieldProvider{
     /**
      * Mapping between transformation pair(class names) and field list
      */
@@ -26,7 +26,6 @@ public class CachedFieldProvider extends FieldProvider {
 
     /**
      * Returns list of similar field names for source/destination classes
-     *
      * @param source
      * @param dest
      * @return
@@ -35,7 +34,7 @@ public class CachedFieldProvider extends FieldProvider {
     public List<String> getFieldNames(Class<?> source, Class<?> dest) {
         String key = source.getSimpleName() + dest.getSimpleName();
         List<String> fields = cache.get(key);
-        if (fields == null) {
+        if(fields == null) {
             fields = ReflectionUtil.findSimilarFields(source, dest);
             cache.put(key, fields);
         }

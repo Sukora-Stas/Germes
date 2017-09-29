@@ -32,7 +32,6 @@ public interface GeographicService {
 
     /**
      * Returns all the stations that match specified criteria
-     *
      * @param criteria
      * @param rangeCriteria
      * @return
@@ -53,7 +52,6 @@ public interface GeographicService {
 
     /**
      * Saves all specified city instances
-     *
      * @param cities
      */
     void saveCities(List<City> cities);

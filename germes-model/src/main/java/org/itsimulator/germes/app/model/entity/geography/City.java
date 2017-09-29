@@ -20,8 +20,6 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
 /**
  * Any locality that contains transport stations
- *
- * @author admin
  */
 @Table(name = "CITY")
 @Entity
@@ -125,5 +123,4 @@ public class City extends AbstractEntity {
         }
         stations.remove(station);
     }
-
 }

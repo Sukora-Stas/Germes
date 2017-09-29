@@ -22,5 +22,4 @@ public interface StationRepository {
      * @return
      */
     List<Station> findAllByCriteria(StationCriteria stationCriteria);
-
 }

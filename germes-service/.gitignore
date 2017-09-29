@@ -1,3 +1,6 @@
+germes-service.iml
+pom.xml.versionsBackup
+*.log
 .settings
 .war
 .jar

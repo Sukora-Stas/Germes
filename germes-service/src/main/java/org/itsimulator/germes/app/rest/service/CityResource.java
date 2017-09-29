@@ -1,23 +1,26 @@
 package org.itsimulator.germes.app.rest.service;
 
-import jersey.repackaged.com.google.common.collect.Lists;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import javax.inject.Inject;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import org.apache.commons.lang3.math.NumberUtils;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 import org.itsimulator.germes.app.rest.dto.CityDTO;
 import org.itsimulator.germes.app.rest.service.base.BaseResource;
 import org.itsimulator.germes.app.service.GeographicService;
-import org.itsimulator.germes.app.service.impl.GeographicServiceImpl;
 import org.itsimulator.germes.app.service.transform.Transformer;
-import org.itsimulator.germes.app.service.transform.impl.SimpleDTOTransformer;
-
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 /**
  * Created by Sukora Stas.

@@ -4,7 +4,6 @@ package org.itsimulator.germes.app.persistence.schema;
  * Created by Sukora Stas.
  */
 
-
 import java.util.Set;
 
 import javax.persistence.Entity;
