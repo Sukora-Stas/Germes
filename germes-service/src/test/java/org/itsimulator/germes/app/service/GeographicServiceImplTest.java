@@ -88,6 +88,7 @@ public class GeographicServiceImplTest {
     }
 
     @Test
+    @Ignore
     public void testSearchStationsByNameSuccess() {
         City city = new City("Zhytomyr");
         city.setDistrict("Zhytomyr");
@@ -130,6 +131,7 @@ public class GeographicServiceImplTest {
     }
 
     @Test
+    @Ignore
     public void testSearchStationsByTransportTypeNotFound() {
         City city = createCity();
         city.addStation(TransportType.AUTO);

@@ -1,23 +1,8 @@
 'use strict';
 
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngResource']);
 
-app.factory('cityService', [function () {
-    var cities = [{
-        'name': 'Odessa',
-        'district': '',
-        'region': 'Odessa'
-    },
-        {
-            'name': 'Izmail',
-            'district': 'Izmail',
-            'region': 'Odessa'
-        }];
-
-    return {
-        'getCities': function () {
-            return cities;
-        }
-    }
+app.factory('cityService', [ '$resource', function($resource) {
+    return $resource('/api/cities');
 }
 ]);
