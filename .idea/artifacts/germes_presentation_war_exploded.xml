@@ -7,10 +7,10 @@
           <element id="module-output" name="germes-presentation" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="germes-service-0.5.4.jar">
+          <element id="archive" name="germes-service-0.5.5.jar">
             <element id="module-output" name="germes-service" />
           </element>
-          <element id="archive" name="germes-model-0.5.4.jar">
+          <element id="archive" name="germes-model-0.5.5.jar">
             <element id="module-output" name="germes-model" />
           </element>
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.1.0.Final" />
@@ -28,7 +28,7 @@
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
           <element id="library" level="project" name="Maven: javax.el:javax.el-api:2.2.4" />
           <element id="library" level="project" name="Maven: org.glassfish.web:javax.el:2.2.4" />
-          <element id="archive" name="germes-persistence-0.5.4.jar">
+          <element id="archive" name="germes-persistence-0.5.5.jar">
             <element id="module-output" name="germes-persistence" />
           </element>
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.1.0.Final" />
