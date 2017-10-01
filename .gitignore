@@ -13,9 +13,7 @@ target/
 .project
 .log
 build/
-.idea/inspectionProfiles/
-.idea/workspace.xml
-.idea/libraries/
+.idea/
 /germes-model/.war
 /germes-persistence/.war
 lib
