@@ -79,3 +79,5 @@ germes-service/out/
 logs
 
 /germes-presentation/src/main/webapp/bower_components/
+/.idea/
+/.gradle/
