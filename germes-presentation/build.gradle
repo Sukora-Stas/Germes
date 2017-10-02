@@ -3,6 +3,7 @@ plugins {
     id 'com.craigburke.karma' version '1.4.3'
 }
 apply plugin: 'war'
+
 dependencies {
     compile project(':germes-service')
     runtime 'com.h2database:h2:1.4.191'
@@ -23,7 +24,8 @@ karma {
     reporters = ['progress']
     profile('default')  {
         libraryBases = ['bower_components/']
-        libraryFiles = ['angular/angular.js', 'angular-mocks/angular-mocks.js', 'angular-resource/angular-resource.js']
+        libraryFiles = ['angular/angular.js', 'angular-mocks/angular-mocks.js', 'angular-resource/angular-resource.js',
+                        'angular-translate/angular-translate.js']
 
         sourceBases = ['js/']
         sourceFiles = ['*.js']

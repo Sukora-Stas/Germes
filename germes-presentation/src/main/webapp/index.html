@@ -2,19 +2,20 @@
 <html ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Germes project</title>
+    <title ng-bind="'TITLE' | translate"></title>
 </head>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
 <body>
-<div ng-bind="'Germes project'"></div>
+<div ng-bind="'TITLE' | translate"></div>
 
-<div ng-controller="CityCtrl"> Cities
+<div ng-controller="CityCtrl">{{'CITIES' | translate}}
     <table style="width: 100%">
         <tr>
-            <th>Name</th>
-            <th>District</th>
-            <th>Region</th>
+            <th ng-bind="'CITY_NAME' | translate"></th>
+            <th ng-bind="'CITY_DISTRICT' | translate"></th>
+            <th ng-bind="'CITY_REGION' | translate"></th>
         </tr>
         <tr ng-repeat="city in cities">
             <td ng-bind="city.name"></td>
