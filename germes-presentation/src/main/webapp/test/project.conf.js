@@ -18,6 +18,7 @@ module.exports = function (config) {
             "../bower_components/angular-mocks/angular-mocks.js",
             "../bower_components/angular-resource/angular-resource.js",
             "../bower_components/angular-translate/angular-translate.js",
+            "../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js",
             "../js/*.js",
             "unit/*.js"
         ],
@@ -29,14 +30,20 @@ module.exports = function (config) {
 
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-        preprocessors: {},
+        preprocessors: {
+            '../js/*.js': 'coverage'
+        },
 
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['progress', 'coverage'],
 
+        coverageReporter: {
+            type: 'html',
+            dir: 'coverage/'
+        },
 
         // web server port
         port: 9876,
