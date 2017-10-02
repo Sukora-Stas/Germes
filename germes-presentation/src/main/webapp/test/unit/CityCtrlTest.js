@@ -44,7 +44,7 @@ describe('Testing City Controller', function () {
 
     it('Should query cities', function () {
 
-        httpBackend.expectGET("/Germes/api/cities").respond(
+        httpBackend.expectGET("/api/cities").respond(
             [
                 {
                     'name': 'Odessa',

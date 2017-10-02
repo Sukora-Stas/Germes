@@ -1,7 +1,7 @@
 {
-  "TITLE" : "Germes project",
-  "CITIES" : "Cities",
+  "TITLE": "Germes project",
+  "CITIES": "Cities",
   "CITY_NAME": "Name",
-  "CITY_DISTRICT" : "District",
-  "CITY_REGION" : "Region"
+  "CITY_DISTRICT": "District",
+  "CITY_REGION": "Region"
 }
