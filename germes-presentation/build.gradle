@@ -1,5 +1,6 @@
 plugins {
     id "org.akhikhl.gretty" version "2.0.0"
+    id 'com.craigburke.karma' version '1.4.3'
 }
 apply plugin: 'war'
 dependencies {
@@ -9,4 +10,25 @@ dependencies {
 gretty {
     contextPath = '/Germes'
     servletContainer = 'tomcat8'
+}
+
+karma {
+    basePath = '../src/main/webapp'
+    colors = true
+    logLevel = 'INFO'
+    profile 'default'
+
+    browsers = ['Chrome']
+    frameworks = ['jasmine']
+    reporters = ['progress']
+    profile('default')  {
+        libraryBases = ['bower_components/']
+        libraryFiles = ['angular/angular.js', 'angular-mocks/angular-mocks.js', 'angular-resource/angular-resource.js']
+
+        sourceBases = ['js/']
+        sourceFiles = ['*.js']
+
+        testBases = ['test/unit/']
+        testFiles = ['*.js']
+    }
 }
