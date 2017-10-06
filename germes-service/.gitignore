@@ -9,19 +9,5 @@ bin
 target/
 .classpath
 .project
-.log
+
 build/
-.idea/inspectionProfiles/
-.idea/workspace.xml
-.idea/libraries/
-germes-model/src/main/resources/
-/germes-model/.war
-/germes-persistence/.war
-germes-model/src/test/resources/
-lib
-/germes-model/build/
-/germes-persistence/build/
-/germes-service/build/
-### Java template
-# Compiled class file
-*.class
