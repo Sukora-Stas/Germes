@@ -3,7 +3,7 @@ allprojects {
     apply plugin: 'eclipse'
 
     group = 'org.it-simulator'
-    version = '0.7.1'
+    version = '0.7.2'
 }
 
 subprojects {

@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.it-simulator</groupId>
         <artifactId>germes</artifactId>
-        <version>0.7.1</version>
+        <version>0.7.2</version>
     </parent>
     <artifactId>germes-service</artifactId>
 
@@ -116,6 +116,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.39</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-jersey2-jaxrs</artifactId>
+            <version>1.5.10</version>
         </dependency>
     </dependencies>
 </project>
