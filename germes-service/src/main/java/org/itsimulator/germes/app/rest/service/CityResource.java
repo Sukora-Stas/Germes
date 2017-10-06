@@ -14,6 +14,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import io.swagger.annotations.*;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
@@ -27,8 +28,12 @@ import org.itsimulator.germes.app.service.transform.Transformer;
  */
 
 @Path("cities")
+@Api("cities")
 /**
  * {@link CityResource} is REST web-service that handles city-related requests
+ *
+ * @author Morenets
+ *
  */
 public class CityResource extends BaseResource {
 
@@ -56,8 +61,10 @@ public class CityResource extends BaseResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @ApiOperation(value = "Returns all the existing cities")
     /**
      * Returns all the existing cities
+     *
      * @return
      */
     public List<CityDTO> findCities() {
@@ -69,6 +76,7 @@ public class CityResource extends BaseResource {
     @Consumes(MediaType.APPLICATION_JSON)
     /**
      * Saves new city instance
+     *
      * @return
      */
     public void saveCity(CityDTO cityDTO) {
@@ -78,11 +86,15 @@ public class CityResource extends BaseResource {
     @Path("/{cityId}")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @ApiOperation(value = "Returns existing city by its identifier")
+    @ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid city identifier"),
+            @ApiResponse(code = 404, message = "Identifier of the non-existing city") })
     /**
      * Returns city with specified identifier
+     *
      * @return
      */
-    public Response findCityById(@PathParam("cityId") final String cityId) {
+    public Response findCityById(@ApiParam("Unique numeric city identifier") @PathParam("cityId") final String cityId) {
         if (!NumberUtils.isNumber(cityId)) {
             return BAD_REQUEST;
         }
