@@ -1,9 +1,14 @@
+plugins {
+    id "org.akhikhl.gretty" version "1.4.0"
+}
+
+
 allprojects {
     apply plugin: 'maven'
     apply plugin: 'eclipse'
 
     group = 'org.it-simulator'
-    version = '0.7.3'
+    version = '0.7.6'
 }
 
 subprojects {
@@ -37,6 +42,8 @@ subprojects {
         compile 'org.apache.commons:commons-lang3:3.4'
         testCompile 'junit:junit:' + junitVersion
     }
+
+
 }
 eclipse {
     classpath {
