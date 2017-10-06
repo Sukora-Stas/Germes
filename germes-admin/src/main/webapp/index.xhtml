@@ -1,5 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Germes application</title>
@@ -8,5 +9,19 @@
     <div>
         <h:outputText value="Germes application"></h:outputText>
     </div>
+    <div>
+        <h:outputText value="Cities"></h:outputText>
+    </div>
+    <h:dataTable>
+        <h:column>
+            <f:facet name="header">Name</f:facet>
+        </h:column>
+        <h:column>
+            <f:facet name="header">District</f:facet>
+        </h:column>
+        <h:column>
+            <f:facet name="header">Region</f:facet>
+        </h:column>
+    </h:dataTable>
 </h:body>
 </html>
