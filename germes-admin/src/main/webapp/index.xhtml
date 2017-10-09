@@ -11,11 +11,14 @@
     <div>
         <h:outputText value="Germes application"></h:outputText>
     </div>
+
     <ui:include src="/WEB-INF/components/city.xhtml" />
+
     <div style="text-align: center">
         <p:panel header="Cities"
                  style="width:600px;margin-left:auto;margin-right:auto">
-            <p:dataTable var="city" value="#{cityController.cities}" id="citiesTable">
+            <p:dataTable var="city" value="#{cityController.cities}"
+                         id="citiesTable">
                 <p:column headerText="Name" sortBy="#{city.name}">
                     #{city.name}
                 </p:column>
@@ -25,10 +28,18 @@
                 <p:column headerText="Region" sortBy="#{city.region}">
                     #{city.region}
                 </p:column>
+                <p:column>
+                    <p:commandButton value="Edit" oncomplete="PF('cityDlg').show();"
+                                     update=":cityForm:cityDialog"
+                                     actionListener="#{currentCity.update(city)}" />
+                    <p:commandButton value="Remove" update="citiesTable"
+                                     actionListener="#{cityController.delete(city.id)}" />
+                </p:column>
                 <f:facet name="footer">
                     <div style="margin-top: 20px; text-align: right">
                         <p:commandButton value="Add city"
-                                         oncomplete="PF('cityDlg').show();" />
+                                         actionListener="#{currentCity.clear()}"
+                                         oncomplete="PF('cityDlg').show();" update=":cityForm:cityDialog" />
                     </div>
                 </f:facet>
             </p:dataTable>

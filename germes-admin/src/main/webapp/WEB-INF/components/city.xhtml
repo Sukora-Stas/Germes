@@ -1,19 +1,19 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core">
+				xmlns:ui="http://java.sun.com/jsf/facelets"
+				xmlns:h="http://java.sun.com/jsf/html"
+				xmlns:p="http://primefaces.org/ui"
+				xmlns:f="http://java.sun.com/jsf/core">
 
 	<h:form id="cityForm">
 		<p:dialog id="cityDialog" header="City details" widgetVar="cityDlg"
-			modal="true" closeOnEscape="true">
+				  modal="true" closeOnEscape="true">
 			<h:panelGrid columns="2">
 				<h:outputText value="Name" />
-				<h:inputText value="#{currentCity.name}" />
+				<p:inputText value="#{currentCity.name}" />
 				<h:outputText value="District" />
-				<h:inputText value="#{currentCity.district}" />
+				<p:inputText value="#{currentCity.district}" />
 				<h:outputText value="Region" />
-				<h:inputText value="#{currentCity.region}" />				
+				<p:inputText value="#{currentCity.region}" />
 			</h:panelGrid>
 
 			<div style="text-align:right; margin-top:20px">

@@ -32,7 +32,8 @@ public class GeographicServiceImpl implements GeographicService {
     private final Validator validator;
 
     @Inject
-    public GeographicServiceImpl(@DBSource CityRepository cityRepository, @DBSource StationRepository stationRepository) {
+    public GeographicServiceImpl(@DBSource CityRepository cityRepository,
+                                 @DBSource StationRepository stationRepository) {
         this.cityRepository = cityRepository;
         this.stationRepository = stationRepository;
 
@@ -73,5 +74,10 @@ public class GeographicServiceImpl implements GeographicService {
     @Override
     public void saveCities(List<City> cities) {
         cityRepository.saveAll(cities);
+    }
+
+    @Override
+    public void deleteCity(int cityId) {
+        cityRepository.delete(cityId);
     }
 }

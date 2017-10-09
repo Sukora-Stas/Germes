@@ -58,4 +58,10 @@ public interface GeographicService {
      */
     void saveCities(List<City> cities);
 
+    /**
+     * Delete city with specified identifier
+     * @param cityId
+     */
+    void deleteCity(int cityId);
+
 }
