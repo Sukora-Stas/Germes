@@ -6,8 +6,9 @@
     <parent>
         <artifactId>germes</artifactId>
         <groupId>org.it-simulator</groupId>
-        <version>0.7.8</version>
+        <version>0.7.9</version>
     </parent>
+    <packaging>war</packaging>
     <artifactId>germes-admin</artifactId>
     <dependencies>
         <dependency>
@@ -16,15 +17,15 @@
             <version>6.0</version>
         </dependency>
         <dependency>
-            <groupId>org.glassfish</groupId>
-            <artifactId>javax.faces</artifactId>
-            <version>2.2.14</version>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>1.2</version>
         </dependency>
     </dependencies>
 
@@ -33,7 +34,24 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.3.1.v20150714</version>
+                <version>9.3.15.v20161220</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jboss.weld.servlet</groupId>
+                        <artifactId>weld-servlet</artifactId>
+                        <version>2.4.1.Final</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>jetty-servlet</artifactId>
+                        <version>9.3.15.v20161220</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish</groupId>
+                        <artifactId>javax.faces</artifactId>
+                        <version>2.2.14</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
