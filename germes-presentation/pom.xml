@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.it-simulator</groupId>
         <artifactId>germes</artifactId>
-        <version>0.7.9</version>
+        <version>0.8.0</version>
     </parent>
     <artifactId>germes-presentation</artifactId>
     <packaging>war</packaging>
@@ -12,7 +12,7 @@
     <dependencies>
         <dependency>
             <groupId>org.it-simulator</groupId>
-            <artifactId>germes-service</artifactId>
+            <artifactId>germes-rest</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

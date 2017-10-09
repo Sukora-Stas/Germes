@@ -5,6 +5,7 @@ package org.itsimulator.germes.app.config;
  */
 
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import org.itsimulator.germes.app.infra.cdi.DBSourceInstance;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
 import org.itsimulator.germes.app.persistence.repository.StationRepository;
@@ -23,8 +24,8 @@ import javax.inject.Singleton;
 public class ComponentBinder extends AbstractBinder {
     @Override
     protected void configure() {
-        bind(HibernateCityRepository.class).to(CityRepository.class).in(Singleton.class);
-        bind(HibernateStationRepository.class).to(StationRepository.class).in(Singleton.class);
+        bind(HibernateCityRepository.class).to(CityRepository.class).in(Singleton.class).qualifiedBy(new DBSourceInstance());
+        bind(HibernateStationRepository.class).to(StationRepository.class).in(Singleton.class).qualifiedBy(new DBSourceInstance());
         bind(SimpleDTOTransformer.class).to(Transformer.class).in(Singleton.class);
         bind(GeographicServiceImpl.class).to(GeographicService.class).in(Singleton.class);
         bind(SessionFactoryBuilder.class).to(SessionFactoryBuilder.class).in(Singleton.class);

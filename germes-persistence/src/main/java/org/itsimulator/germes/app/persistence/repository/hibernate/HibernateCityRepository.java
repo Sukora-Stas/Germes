@@ -9,6 +9,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.itsimulator.germes.app.infra.cdi.DBSource;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
@@ -20,6 +21,7 @@ import org.slf4j.LoggerFactory;
  * Created by Sukora Stas.
  */
 @Named
+@DBSource
 public class HibernateCityRepository implements CityRepository {
     private static final Logger LOGGER = LoggerFactory.getLogger(HibernateCityRepository.class);
 

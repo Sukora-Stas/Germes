@@ -10,6 +10,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.itsimulator.germes.app.infra.cdi.DBSource;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
 import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
@@ -18,6 +19,7 @@ import org.itsimulator.germes.app.persistence.repository.StationRepository;
 
 
 @Named
+@DBSource
 public class HibernateStationRepository implements StationRepository {
 
     private final SessionFactory sessionFactory;

@@ -6,7 +6,7 @@ apply plugin: 'org.akhikhl.gretty'
 apply plugin: 'war'
 
 dependencies {
-    compile project(':germes-service')
+    compile project(':germes-rest')
     runtime 'com.h2database:h2:1.4.191'
 }
 
