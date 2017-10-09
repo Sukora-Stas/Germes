@@ -5,22 +5,25 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Germes application</title>
 </h:head>
-<h:body>
-    <div>
-        <h:outputText value="Germes application"></h:outputText>
+<h:body xmlns:h="http://java.sun.com/jsf/html">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <h:outputText value="Germes application"/>
     </div>
-    <div>
-        <h:outputText value="Cities"></h:outputText>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+        <h:outputText value="Cities"/>
     </div>
-    <h:dataTable>
+    <h:dataTable var="city" value="#{citiesBean.cities}">
         <h:column>
-            <f:facet name="header">Name</f:facet>
+            <f:facet xmlns:f="http://java.sun.com/jsf/core" name="header">Name</f:facet>
+            #{city.name}
         </h:column>
         <h:column>
-            <f:facet name="header">District</f:facet>
+            <f:facet xmlns:f="http://java.sun.com/jsf/core" name="header">District</f:facet>
+            #{city.district}
         </h:column>
         <h:column>
-            <f:facet name="header">Region</f:facet>
+            <f:facet xmlns:f="http://java.sun.com/jsf/core" name="header">Region</f:facet>
+            #{city.region}
         </h:column>
     </h:dataTable>
 </h:body>
