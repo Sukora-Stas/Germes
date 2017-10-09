@@ -17,7 +17,8 @@
 			</h:panelGrid>
 
 			<div style="text-align:right; margin-top:20px">
-				<p:commandButton oncomplete="PF('cityDlg').hide();" value="Save" />
+				<p:commandButton oncomplete="PF('cityDlg').hide();" actionListener="#{cityController.saveCity(currentCity)}" value="Save"
+								 update="citiesTable" />
 				<p:commandButton value="Cancel" oncomplete="PF('cityDlg').hide();" />
 			</div>
 		</p:dialog>
