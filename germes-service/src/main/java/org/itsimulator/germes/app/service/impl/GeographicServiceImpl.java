@@ -1,15 +1,5 @@
 package org.itsimulator.germes.app.service.impl;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-
-import javax.inject.Inject;
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-
 import org.itsimulator.germes.app.infra.exception.flow.ValidationException;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
@@ -19,9 +9,20 @@ import org.itsimulator.germes.app.persistence.repository.CityRepository;
 import org.itsimulator.germes.app.persistence.repository.StationRepository;
 import org.itsimulator.germes.app.service.GeographicService;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+
 /**
  * Default implementation of the {@link GeographicService}
  */
+@Named
 public class GeographicServiceImpl implements GeographicService {
     private final CityRepository cityRepository;
 

@@ -1,7 +1,11 @@
 package org.germes.presentation.admin.bean;
 
-import javax.faces.bean.ManagedBean;
+import org.itsimulator.germes.app.model.entity.geography.City;
+import org.itsimulator.germes.app.service.GeographicService;
+
 import javax.faces.bean.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,22 +13,19 @@ import java.util.List;
  * Created by Sukora Stas.
  */
 
-@ManagedBean
-@RequestScoped
 /**
  * Managed bean that keeps all the cities for the main page
  */
+@Named
+@RequestScoped
 public class CitiesBean {
-
-    private final List<CityBean> cities;
-
-    public CitiesBean() {
-        cities = new ArrayList<>();
-        cities.add(new CityBean("Odessa", "", "Odessa"));
-        cities.add(new CityBean("Izmail", "", "Odessa"));
+    private final GeographicService geographicService;
+    @Inject
+    public CitiesBean(GeographicService geographicService) {
+        this.geographicService = geographicService;
     }
 
-    public List<CityBean> getCities() {
-        return cities;
+    public List<City> getCities() {
+        return geographicService.findCities();
     }
 }

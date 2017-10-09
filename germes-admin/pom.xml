@@ -12,6 +12,16 @@
     <artifactId>germes-admin</artifactId>
     <dependencies>
         <dependency>
+            <groupId>org.it-simulator</groupId>
+            <artifactId>germes-service</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.it-simulator</groupId>
+            <artifactId>germes-model</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
             <version>6.0</version>
@@ -28,7 +38,6 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -50,6 +59,11 @@
                         <groupId>org.glassfish</groupId>
                         <artifactId>javax.faces</artifactId>
                         <version>2.2.14</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jboss</groupId>
+                        <artifactId>jandex</artifactId>
+                        <version>2.0.0.Final</version>
                     </dependency>
                 </dependencies>
             </plugin>

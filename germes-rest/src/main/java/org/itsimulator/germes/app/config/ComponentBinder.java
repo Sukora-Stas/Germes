@@ -4,8 +4,6 @@ package org.itsimulator.germes.app.config;
  * Created by Sukora Stas.
  */
 
-import javax.inject.Singleton;
-
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
@@ -16,6 +14,8 @@ import org.itsimulator.germes.app.service.GeographicService;
 import org.itsimulator.germes.app.service.impl.GeographicServiceImpl;
 import org.itsimulator.germes.app.service.transform.Transformer;
 import org.itsimulator.germes.app.service.transform.impl.SimpleDTOTransformer;
+
+import javax.inject.Singleton;
 
 /**
  * Binds bean implementations and implemented interfaces

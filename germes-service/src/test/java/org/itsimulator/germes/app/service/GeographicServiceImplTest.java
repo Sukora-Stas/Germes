@@ -1,12 +1,5 @@
 package org.itsimulator.germes.app.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-
 import org.itsimulator.germes.app.infra.exception.flow.ValidationException;
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
@@ -23,6 +16,13 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 import static org.junit.Assert.*;
 
@@ -88,7 +88,6 @@ public class GeographicServiceImplTest {
     }
 
     @Test
-    @Ignore
     public void testSearchStationsByNameSuccess() {
         City city = new City("Zhytomyr");
         city.setDistrict("Zhytomyr");
@@ -131,7 +130,6 @@ public class GeographicServiceImplTest {
     }
 
     @Test
-    @Ignore
     public void testSearchStationsByTransportTypeNotFound() {
         City city = createCity();
         city.addStation(TransportType.AUTO);

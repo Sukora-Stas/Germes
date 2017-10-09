@@ -1,19 +1,5 @@
 package org.itsimulator.germes.app.rest.service;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
-
-import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
 import io.swagger.annotations.*;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.itsimulator.germes.app.model.entity.geography.City;
@@ -22,6 +8,14 @@ import org.itsimulator.germes.app.rest.dto.CityDTO;
 import org.itsimulator.germes.app.rest.service.base.BaseResource;
 import org.itsimulator.germes.app.service.GeographicService;
 import org.itsimulator.germes.app.service.transform.Transformer;
+
+import javax.inject.Inject;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Created by Sukora Stas.
@@ -87,8 +81,8 @@ public class CityResource extends BaseResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @ApiOperation(value = "Returns existing city by its identifier")
-    @ApiResponses(value = { @ApiResponse(code = 400, message = "Invalid city identifier"),
-            @ApiResponse(code = 404, message = "Identifier of the non-existing city") })
+    @ApiResponses(value = {@ApiResponse(code = 400, message = "Invalid city identifier"),
+            @ApiResponse(code = 404, message = "Identifier of the non-existing city")})
     /**
      * Returns city with specified identifier
      *

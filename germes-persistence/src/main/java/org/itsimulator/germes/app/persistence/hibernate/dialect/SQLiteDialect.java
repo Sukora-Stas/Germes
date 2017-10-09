@@ -10,18 +10,10 @@ package org.itsimulator.germes.app.persistence.hibernate.dialect;
  *
  */
 
-import java.sql.SQLException;
-import java.sql.Types;
-
 import org.hibernate.JDBCException;
 import org.hibernate.ScrollMode;
 import org.hibernate.dialect.Dialect;
-import org.hibernate.dialect.function.AbstractAnsiTrimEmulationFunction;
-import org.hibernate.dialect.function.NoArgSQLFunction;
-import org.hibernate.dialect.function.SQLFunction;
-import org.hibernate.dialect.function.SQLFunctionTemplate;
-import org.hibernate.dialect.function.StandardSQLFunction;
-import org.hibernate.dialect.function.VarArgsSQLFunction;
+import org.hibernate.dialect.function.*;
 import org.hibernate.dialect.identity.IdentityColumnSupport;
 import org.hibernate.dialect.pagination.AbstractLimitHandler;
 import org.hibernate.dialect.pagination.LimitHandler;
@@ -39,6 +31,9 @@ import org.hibernate.internal.util.JdbcExceptionHelper;
 import org.hibernate.mapping.Column;
 import org.hibernate.type.StandardBasicTypes;
 import org.itsimulator.germes.app.persistence.hibernate.dialect.identity.SQLiteDialectIdentityColumnSupport;
+
+import java.sql.SQLException;
+import java.sql.Types;
 
 /**
  * An SQL dialect for SQLite 3.

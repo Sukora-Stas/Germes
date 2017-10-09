@@ -1,14 +1,5 @@
 package org.itsimulator.germes.app.persistence.hibernate;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-import java.util.Set;
-
-import javax.annotation.PreDestroy;
-import javax.persistence.Entity;
-import javax.persistence.PersistenceException;
-
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -16,9 +7,19 @@ import org.hibernate.service.ServiceRegistry;
 import org.itsimulator.germes.app.persistence.hibernate.interceptor.TimestampInterceptor;
 import org.reflections.Reflections;
 
+import javax.annotation.PreDestroy;
+import javax.inject.Named;
+import javax.persistence.Entity;
+import javax.persistence.PersistenceException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.Set;
+
 /**
  * Component that is responsible for managing Hibernate session factory
  */
+@Named
 public class SessionFactoryBuilder {
     private final SessionFactory sessionFactory;
 

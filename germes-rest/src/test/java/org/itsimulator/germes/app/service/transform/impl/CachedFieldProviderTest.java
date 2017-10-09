@@ -1,5 +1,9 @@
 package org.itsimulator.germes.app.service.transform.impl;
 
+import mockit.Expectations;
+import mockit.Mock;
+import mockit.MockUp;
+import mockit.integration.junit4.JMockit;
 import org.itsimulator.germes.app.infra.util.ReflectionUtil;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -7,16 +11,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.api.mockito.PowerMockito;
 
-import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
-import mockit.Expectations;
-import mockit.Mock;
-import mockit.MockUp;
-import mockit.integration.junit4.JMockit;
-
 import java.util.Collections;
 import java.util.List;
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.when;
 
 /**
  * Verifies functionality of the {@link SimpleDTOTransformer} unit

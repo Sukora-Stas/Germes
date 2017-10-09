@@ -1,12 +1,12 @@
 package org.itsimulator.germes.app.service;
 
-import java.util.List;
-import java.util.Optional;
-
 import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.model.entity.geography.Station;
 import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 import org.itsimulator.germes.app.model.search.criteria.range.RangeCriteria;
+
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Entry point to perform operations
@@ -32,6 +32,7 @@ public interface GeographicService {
 
     /**
      * Returns all the stations that match specified criteria
+     *
      * @param criteria
      * @param rangeCriteria
      * @return
@@ -52,6 +53,7 @@ public interface GeographicService {
 
     /**
      * Saves all specified city instances
+     *
      * @param cities
      */
     void saveCities(List<City> cities);
