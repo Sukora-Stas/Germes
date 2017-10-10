@@ -7,7 +7,7 @@ apply plugin: 'war'
 
 dependencies {
     compile project(':germes-rest')
-    runtime 'com.h2database:h2:1.4.191'
+    runtime 'com.h2database:h2:' + h2Version
 }
 
 gretty {
@@ -24,7 +24,7 @@ karma {
     browsers = ['Chrome']
     frameworks = ['jasmine']
     reporters = ['progress']
-    profile('default') {
+    profile('default')  {
         libraryBases = ['bower_components/']
         libraryFiles = ['angular/angular.js', 'angular-mocks/angular-mocks.js', 'angular-resource/angular-resource.js',
                         'angular-translate/angular-translate.js', 'angular-translate-loader-static-files/angular-translate-loader-static-files.js']
@@ -36,5 +36,3 @@ karma {
         testFiles = ['*.js']
     }
 }
-
-//karmaRun.dependsOn test

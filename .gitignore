@@ -3,7 +3,7 @@
 .springBeans
 bin
 gradle
-.idea/
+.idea
 target/
 build/
 .classpath
