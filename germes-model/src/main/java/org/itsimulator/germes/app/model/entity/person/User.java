@@ -4,6 +4,7 @@ import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -12,7 +13,10 @@ import javax.persistence.Table;
 
 @Table(name = "USER")
 @Entity
-public class User extends AbstractEntity{
+@NamedQuery(name = User.QUERY_FIND_ALL, query = "from User")
+public class User extends AbstractEntity {
+    public static final String QUERY_FIND_ALL = "User.findAll";
+
     /**
      * Unique user name within the system
      */
@@ -23,7 +27,7 @@ public class User extends AbstractEntity{
      */
     private String password;
 
-    @Column(name="USERNAME", nullable = false, unique = true, length = 24)
+    @Column(name = "USERNAME", nullable = false, unique = true, length = 24)
     public String getUserName() {
         return userName;
     }
@@ -32,7 +36,7 @@ public class User extends AbstractEntity{
         this.userName = userName;
     }
 
-    @Column(name="PASSWORD", nullable = false, length = 24)
+    @Column(name = "PASSWORD", nullable = false, length = 24)
     public String getPassword() {
         return password;
     }
