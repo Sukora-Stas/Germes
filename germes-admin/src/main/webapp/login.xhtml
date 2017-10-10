@@ -1,27 +1,26 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
-<f:view locale="#{language.locale}" contentType="text/html"
-        encoding="UTF-8">
-    <h:head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    </h:head>
-    <h:body>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/layout/standard.xhtml">
+
+    <ui:define name="content">
         <h:form prependId="false">
             <h:panelGrid columns="2">
-                <h:outputText value="#{msg['login.username']}" />
-                <p:inputText id="username" required="true" value="#{userBean.username}"/>
+                <h:outputText value="#{msg['login.username']}"/>
+                <p:inputText id="username" required="true"
+                             value="#{userBean.username}"/>
 
-                <h:outputText value="#{msg['login.password']}" />
-                <p:password id="password" required="true" value="#{userBean.password}"/>
+                <h:outputText value="#{msg['login.password']}"/>
+                <p:password id="password" required="true"
+                            value="#{userBean.password}"/>
 
-                <p:commandButton value="#{msg['button.login']}" action="#{userBean.login}" />
+                <p:commandButton value="#{msg['button.login']}"
+                                 action="#{userBean.login}"/>
             </h:panelGrid>
 
-            <p:messages id="messages" autoUpdate="true" closable="true" />
+            <p:messages id="messages" autoUpdate="true" closable="true"/>
         </h:form>
+    </ui:define>
 
-    </h:body>
-</f:view>
-</html>
+</ui:composition>
