@@ -16,7 +16,7 @@
                 <p:inputText value="#{currentCity.region}"/>
             </h:panelGrid>
 
-            <div style="text-align: right; margin-top: 20px">
+            <div class="button">
                 <p:commandButton oncomplete="PF('cityDlg').hide();"
                                  actionListener="#{cityController.saveCity(currentCity)}"
                                  value="#{msg['button.save']}" update="citiesTable"/>

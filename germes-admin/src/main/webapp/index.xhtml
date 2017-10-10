@@ -8,9 +8,10 @@
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title><h:outputText value="#{msg['app.name']}"/></title>
+        <h:outputStylesheet library="css" name="main.css"/>
     </h:head>
     <h:body>
-        <div style="text-align: center">
+        <div class="center">
             <div>
                 <h:outputText value="#{msg['app.name']}"/>
             </div>
@@ -26,7 +27,7 @@
             <ui:include src="/WEB-INF/components/city.xhtml"/>
 
             <p:panel header="#{msg['city.caption']}"
-                     style="width:600px;margin-left:auto;margin-right:auto">
+                     styleClass="cities">
                 <p:dataTable var="city" value="#{cityController.cities}"
                              id="citiesTable">
                     <p:column headerText="#{msg['city.name']}" sortBy="#{city.name}">
@@ -48,7 +49,7 @@
                                          actionListener="#{cityController.delete(city.id)}"/>
                     </p:column>
                     <f:facet name="footer">
-                        <div style="margin-top: 20px; text-align: right">
+                        <div class="button">
                             <p:commandButton value="#{msg['button.add']}"
                                              actionListener="#{currentCity.clear()}"
                                              oncomplete="PF('cityDlg').show();" update=":cityForm:cityDialog"/>

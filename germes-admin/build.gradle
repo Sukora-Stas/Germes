@@ -11,10 +11,15 @@ dependencies {
     runtime 'javax.enterprise:cdi-api:1.2'
     runtime 'com.h2database:h2:1.4.191'
     compile 'org.jboss.weld.servlet:weld-servlet:2.4.1.Final'
+    compile 'org.primefaces.themes:bootstrap:1.0.10'
 
     testCompile('org.jglue.cdi-unit:cdi-unit:3.1.4') { exclude group:'org.jboss.weld.se' }
     testCompile 'org.jboss.weld.se:weld-se-core:2.4.1.Final'
     testCompile 'org.mockito:mockito-all:1.10.19'
+}
+
+repositories {
+    maven { url "http://repository.primefaces.org" }
 }
 
 gretty {

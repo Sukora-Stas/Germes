@@ -1,20 +1,13 @@
-gradlew
-gradlew.bat
-pom.xml.versionsBackup
-schema_MySQL5Dialect.sql
-*.iml
-build/
+.settings
+.gradle
+.springBeans
+bin
+gradle
 .idea/
-.gradle/
-### Java template
-# Compiled class file
-*.class
-
-*.log
-
-germes-model/out/
-germes-persistence/out/
-germes-service/out/
-### Node template
-# Logs
-logs
+target/
+build/
+.classpath
+.project
+.log
+bower_components/
+node_modules/
