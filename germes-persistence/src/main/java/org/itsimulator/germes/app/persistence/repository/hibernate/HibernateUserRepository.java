@@ -52,4 +52,10 @@ public class HibernateUserRepository extends BaseHibernateRepository implements 
         return query(session -> session.createNamedQuery(User.QUERY_FIND_ALL, User.class).list());
     }
 
+    @Override
+    public Optional<User> findByUserName(String userName) {
+        return query(session -> session.createNamedQuery(User.QUERY_FIND_BY_USERNAME, User.class)
+                .setParameter("userName", userName).uniqueResultOptional());
+    }
+
 }

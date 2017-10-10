@@ -33,9 +33,6 @@ public class CityController {
         this.transformer = transformer;
     }
 
-    public void init(@Observes @Initialized(ApplicationScoped.class) Object event) {
-    }
-
     public List<City> getCities() {
         return geographicService.findCities();
     }
@@ -54,6 +51,7 @@ public class CityController {
     }
 
 }
+
 
 
 

@@ -30,6 +30,14 @@ public interface UserRepository {
     Optional<User> findById(int userId);
 
     /**
+     * Returns user with specified username
+     *
+     * @param userName
+     * @return
+     */
+    Optional<User> findByUserName(String userName);
+
+    /**
      * Delete city with specified identifier
      *
      * @param cityId

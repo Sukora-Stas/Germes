@@ -1,25 +1,19 @@
 package org.itsimulator.germes.app.service.impl;
 
+import java.util.List;
+import java.util.Optional;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.itsimulator.germes.app.infra.cdi.DBSource;
 import org.itsimulator.germes.app.model.entity.person.User;
 import org.itsimulator.germes.app.persistence.repository.UserRepository;
 import org.itsimulator.germes.app.service.UserService;
 
-import javax.inject.Inject;
-import javax.inject.Named;
-import java.util.List;
-import java.util.Optional;
-
-/**
- * Created by Sukora Stas.
- */
-
-
 @Named
 /**
  * Default and managed(by CDI container) implementation of UserService
- *
- * @author Morenets
  *
  */
 public class UserServiceImpl implements UserService {
@@ -29,6 +23,11 @@ public class UserServiceImpl implements UserService {
     @Inject
     public UserServiceImpl(@DBSource UserRepository userRepository) {
         this.userRepository = userRepository;
+
+        User user = new User();
+        user.setUserName("guest");
+        user.setPassword("guest");
+        userRepository.save(user);
     }
 
     @Override
@@ -49,5 +48,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> findAll() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public Optional<User> findByUserName(String userName) {
+        return userRepository.findByUserName(userName);
     }
 }
