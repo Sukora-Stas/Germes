@@ -12,7 +12,7 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 
-import org.itsimulator.germes.app.model.entity.person.Account;
+import org.itsimulator.germes.app.model.entity.person.User;
 
 /**
  * Base class for all business entities
@@ -40,12 +40,12 @@ public abstract class AbstractEntity {
     /**
      * Person who created specific entity
      */
-    private Account createdBy;
+    private User createdBy;
 
     /**
      * Last person who modified entity
      */
-    private Account modifiedBy;
+    private User modifiedBy;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -78,21 +78,21 @@ public abstract class AbstractEntity {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = {})
     @JoinColumn(name = "CREATED_BY", updatable = false)
-    public Account getCreatedBy() {
+    public User getCreatedBy() {
         return createdBy;
     }
 
-    public void setCreatedBy(Account createdBy) {
+    public void setCreatedBy(User createdBy) {
         this.createdBy = createdBy;
     }
 
     @OneToOne(fetch = FetchType.LAZY, cascade = {})
     @JoinColumn(name = "MODIFIED_BY", insertable = false)
-    public Account getModifiedBy() {
+    public User getModifiedBy() {
         return modifiedBy;
     }
 
-    public void setModifiedBy(Account modifiedBy) {
+    public void setModifiedBy(User modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
 
