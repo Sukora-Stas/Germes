@@ -1,9 +1,10 @@
 .settings
 .gradle
+.idea
 .springBeans
 bin
 gradle
-.idea
+
 target/
 build/
 .classpath
