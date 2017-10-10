@@ -16,7 +16,8 @@ dependencies {
 
     testCompile('org.jglue.cdi-unit:cdi-unit:3.1.4') { exclude group:'org.jboss.weld.se' }
     testCompile 'org.jboss.weld.se:weld-se-core:' + weldVersion
-    testCompile 'org.mockito:mockito-all:1.10.19'
+    testCompile 'org.mockito:mockito-core:2.7.19'
+    testRuntime 'org.powermock:powermock-api-mockito2:1.7.0RC4'
 }
 
 repositories {
