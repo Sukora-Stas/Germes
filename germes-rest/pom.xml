@@ -6,7 +6,7 @@
     <parent>
         <artifactId>germes</artifactId>
         <groupId>org.it-simulator</groupId>
-        <version>0.9.4</version>
+        <version>0.9.5</version>
     </parent>
     <artifactId>germes-rest</artifactId>
     <dependencyManagement>
