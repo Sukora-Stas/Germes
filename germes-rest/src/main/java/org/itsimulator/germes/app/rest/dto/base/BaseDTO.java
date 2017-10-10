@@ -6,11 +6,12 @@ package org.itsimulator.germes.app.rest.dto.base;
 
 
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
+import org.itsimulator.germes.app.model.transform.Transformable;
 
 /**
  * Base class for all DTO classes
  */
-public abstract class BaseDTO<T extends AbstractEntity> {
+public abstract class BaseDTO<T extends AbstractEntity> implements Transformable<T> {
     /**
      * Unique entity identifier
      */
@@ -42,3 +43,4 @@ public abstract class BaseDTO<T extends AbstractEntity> {
         this.id = id;
     }
 }
+

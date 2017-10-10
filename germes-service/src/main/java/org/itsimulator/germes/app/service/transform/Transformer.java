@@ -6,7 +6,7 @@ package org.itsimulator.germes.app.service.transform;
 
 
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
-import org.itsimulator.germes.app.rest.dto.base.BaseDTO;
+import org.itsimulator.germes.app.model.transform.Transformable;
 
 /**
  * Represents transformation engine to convert business entities
@@ -20,7 +20,15 @@ public interface Transformer {
      * @param clz
      * @return
      */
-    <T extends AbstractEntity, P extends BaseDTO<T>> P transform(T entity, Class<P> clz);
+    <T extends AbstractEntity, P extends Transformable<T>> P transform(T entity, Class<P> clz);
+
+    /**
+     * Converts specified entity into existing DTO object
+     * @param entity
+     * @param dest
+     * @return
+     */
+    <T extends AbstractEntity, P extends Transformable<T>> void transform(T entity, P dest);
 
     /**
      * Converts specified DTO object into business entity
@@ -28,6 +36,6 @@ public interface Transformer {
      * @param clz
      * @return
      */
-    <T extends AbstractEntity, P extends BaseDTO<T>> T untransform(P dto, Class<T> clz);
+    <T extends AbstractEntity, P extends Transformable<T>> T untransform(P dto, Class<T> clz);
 
 }

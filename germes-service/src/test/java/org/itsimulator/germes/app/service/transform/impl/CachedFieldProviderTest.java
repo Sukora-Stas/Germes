@@ -17,11 +17,10 @@ import java.util.List;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;
 
+
 /**
  * Verifies functionality of the {@link SimpleDTOTransformer} unit
  */
-
-
 // @RunWith(PowerMockRunner.class)
 // @PrepareForTest(ReflectionUtil.class)
 @RunWith(JMockit.class)
