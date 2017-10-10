@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/germes-model" />
             <option value="$PROJECT_DIR$/germes-persistence" />
             <option value="$PROJECT_DIR$/germes-presentation" />
+            <option value="$PROJECT_DIR$/germes-rest" />
             <option value="$PROJECT_DIR$/germes-service" />
           </set>
         </option>

@@ -15,6 +15,9 @@
       <module fileurl="file://$PROJECT_DIR$/germes-presentation/germes-presentation.iml" filepath="$PROJECT_DIR$/germes-presentation/germes-presentation.iml" group="germes-presentation" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/germes-presentation/germes-presentation_main.iml" filepath="$PROJECT_DIR$/.idea/modules/germes-presentation/germes-presentation_main.iml" group="germes-presentation" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/germes-presentation/germes-presentation_test.iml" filepath="$PROJECT_DIR$/.idea/modules/germes-presentation/germes-presentation_test.iml" group="germes-presentation" />
+      <module fileurl="file://$PROJECT_DIR$/germes-rest/germes-rest.iml" filepath="$PROJECT_DIR$/germes-rest/germes-rest.iml" group="germes-rest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/germes-rest/germes-rest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/germes-rest/germes-rest_main.iml" group="germes-rest" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/germes-rest/germes-rest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/germes-rest/germes-rest_test.iml" group="germes-rest" />
       <module fileurl="file://$PROJECT_DIR$/germes-service/germes-service.iml" filepath="$PROJECT_DIR$/germes-service/germes-service.iml" group="germes-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/germes-service/germes-service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/germes-service/germes-service_main.iml" group="germes-service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/germes-service/germes-service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/germes-service/germes-service_test.iml" group="germes-service" />
