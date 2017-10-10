@@ -5,6 +5,7 @@ package org.germes.presentation.admin.security;
  */
 
 import org.apache.shiro.authc.*;
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
@@ -25,6 +26,12 @@ public class CDIRealm extends AuthorizingRealm {
 
     public CDIRealm(UserService userService) {
         this.userService = userService;
+
+        HashedCredentialsMatcher credentialsMatcher = new HashedCredentialsMatcher();
+        credentialsMatcher.setHashAlgorithmName("SHA-256");
+        credentialsMatcher.setStoredCredentialsHexEncoded(true);
+
+        setCredentialsMatcher(credentialsMatcher);
     }
 
     @Override
@@ -33,10 +40,11 @@ public class CDIRealm extends AuthorizingRealm {
         String username = upToken.getUsername();
 
         try {
-            String password = Optional.ofNullable(username).flatMap(name -> userService.findByUserName(name)).map(User::getPassword)
+            String password = Optional.ofNullable(username).flatMap(name -> userService.findByUserName(name))
+                    .map(User::getPassword)
                     .orElseThrow(() -> new UnknownAccountException("No account found for user " + username));
 
-            return new SimpleAuthenticationInfo(username, password.toCharArray(), getName());
+            return new SimpleAuthenticationInfo(username, password, getName());
 
         } catch (Exception e) {
             String message = "There was a error while authenticating user " + username;
