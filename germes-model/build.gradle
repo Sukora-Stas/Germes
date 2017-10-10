@@ -1,6 +1,6 @@
 dependencies {
     compile 'org.hibernate:hibernate-core:' + hibernateVersion
-    compile 'org.hibernate:hibernate-validator:5.2.4.Final'
+    compile 'org.hibernate:hibernate-validator:5.4.0.Final'
 
     runtime 'javax.el:javax.el-api:' + elVersion
     runtime 'org.glassfish.web:javax.el:' + elVersion

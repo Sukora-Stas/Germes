@@ -1,9 +1,8 @@
 dependencies {
     compile project(':germes-model')
-    testCompile 'org.hibernate:hibernate-tools:4.3.2.Final'
-    runtime 'org.hibernate:hibernate-java8:' + hibernateVersion
+    testCompile 'org.hibernate:hibernate-tools:5.2.2.Final'
 
-    compile 'org.glassfish.hk2.external:javax.inject:2.4.0-b31'
-    compile 'org.reflections:reflections:0.9.10'
-    compile 'com.zaxxer:HikariCP:2.4.6'
+    compile 'org.glassfish.hk2.external:javax.inject:2.5.0-b36'
+    compile 'org.reflections:reflections:0.9.11'
+    compile 'com.zaxxer:HikariCP:2.6.1'
 }

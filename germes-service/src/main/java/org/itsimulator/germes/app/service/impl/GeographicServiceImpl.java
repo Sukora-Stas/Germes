@@ -48,9 +48,9 @@ public class GeographicServiceImpl implements GeographicService {
 
     @Override
     public void saveCity(City city) {
-        Set<ConstraintViolation<City>> constraintViolations = validator.validate(city);
+        Set constraintViolations = validator.validate(city);
         if (!constraintViolations.isEmpty()) {
-            throw new ValidationException("City validation failure", constraintViolations);
+            throw new ValidationException("Validation failure", constraintViolations);
         }
 
         cityRepository.save(city);

@@ -1,26 +1,27 @@
 plugins {
-    id "org.akhikhl.gretty" version "1.4.0"
+    id "org.akhikhl.gretty" version "1.4.2"
 }
-
 
 allprojects {
     apply plugin: 'maven'
     apply plugin: 'eclipse'
 
     group = 'org.it-simulator'
-    version = '0.8.9'
+    version = '0.9.1'
 }
 
 subprojects {
     ext {
         guavaVersion = '18.0'
-        slf4jVersion = '1.7.12'
-        log4jVersion = '2.5'
+        slf4jVersion = '1.7.24'
+        log4jVersion = '2.8.1'
         junitVersion = '4.12'
-        jerseyVersion = '2.22.1'
-        powerMockVersion = '1.6.4'
-        hibernateVersion = '5.1.0.Final'
+        jerseyVersion = '2.25.1'
+        powerMockVersion = '1.6.6'
+        hibernateVersion = '5.2.8.Final'
         elVersion = '2.2.4'
+        h2Version = '1.4.194'
+        weldVersion = '2.4.1.Final'
     }
 
     apply plugin: 'java'
@@ -39,12 +40,12 @@ subprojects {
         compile 'org.apache.logging.log4j:log4j-slf4j-impl:' + log4jVersion
         compile 'org.apache.logging.log4j:log4j-api:' + log4jVersion
         compile 'org.apache.logging.log4j:log4j-core:' + log4jVersion
-        compile 'org.apache.commons:commons-lang3:3.4'
+        compile 'org.apache.commons:commons-lang3:3.5'
         testCompile 'junit:junit:' + junitVersion
     }
 
-
 }
+
 eclipse {
     classpath {
         downloadSources = true

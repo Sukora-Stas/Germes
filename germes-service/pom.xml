@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.it-simulator</groupId>
         <artifactId>germes</artifactId>
-        <version>0.8.9</version>
+        <version>0.9.0</version>
     </parent>
     <artifactId>germes-service</artifactId>
     <dependencies>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <version>1.4.191</version>
+            <version>${h2.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>

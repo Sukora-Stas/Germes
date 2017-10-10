@@ -17,6 +17,7 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import javax.validation.ConstraintViolation;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -267,7 +268,7 @@ public class GeographicServiceImplTest {
 
             fail("City name validation failed");
         } catch (ValidationException ex) {
-            assertTrue(ex.getMessage().contains("name:may not be null"));
+            assertValidation(ex, "name", City.class, "{javax.validation.constraints.NotNull.message}");
         }
     }
 
@@ -281,8 +282,16 @@ public class GeographicServiceImplTest {
 
             fail("City name validation failed");
         } catch (ValidationException ex) {
-            assertTrue(ex.getMessage().contains("name:size must be between 2 and 32"));
+            assertValidation(ex, "name", City.class, "{javax.validation.constraints.Size.message}");
         }
+    }
+
+    private void assertValidation(ValidationException ex, String fieldName, Class<?> clz, String messageKey) {
+        assertFalse(ex.getConstraints().isEmpty());
+        ConstraintViolation<?> constraint = ex.getConstraints().iterator().next();
+        assertTrue(constraint.getMessageTemplate().equals(messageKey));
+        assertTrue(constraint.getPropertyPath().toString().equals(fieldName));
+        assertTrue(constraint.getRootBeanClass().equals(clz));
     }
 
     @Test
@@ -295,7 +304,7 @@ public class GeographicServiceImplTest {
 
             fail("City name validation failed");
         } catch (ValidationException ex) {
-            assertTrue(ex.getMessage().contains("name:size must be between 2 and 32"));
+            assertValidation(ex, "name", City.class, "{javax.validation.constraints.Size.message}");
         }
     }
 
