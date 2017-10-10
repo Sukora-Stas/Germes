@@ -3,47 +3,60 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-<h:head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><h:outputText value="#{msg['app.name']}" /></title>
-</h:head>
-<h:body>
-    <div>
-        <h:outputText value="#{msg['app.name']}" />
-    </div>
+<f:view locale="#{language.locale}" contentType="text/html"
+        encoding="UTF-8">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title><h:outputText value="#{msg['app.name']}"/></title>
+    </h:head>
+    <h:body>
+        <div style="text-align: center">
+            <div>
+                <h:outputText value="#{msg['app.name']}"/>
+            </div>
+            <h:panelGrid columns="3">
+                <p:commandLink value="UA" update="@all"
+                               actionListener="#{language.setLanguage('uk_UA')}"/>
+                <p:commandLink value="EN" update="@all"
+                               actionListener="#{language.setLanguage('en_US')}"/>
+                <p:commandLink value="RU" update="@all"
+                               actionListener="#{language.setLanguage('ru_RU')}"/>
+            </h:panelGrid>
 
-    <ui:include src="/WEB-INF/components/city.xhtml" />
+            <ui:include src="/WEB-INF/components/city.xhtml"/>
 
-    <div style="text-align: center">
-        <p:panel header="#{msg['city.caption']}"
-                 style="width:600px;margin-left:auto;margin-right:auto">
-            <p:dataTable var="city" value="#{cityController.cities}"
-                         id="citiesTable">
-                <p:column headerText="#{msg['city.name']}" sortBy="#{city.name}">
-                    #{city.name}
-                </p:column>
-                <p:column headerText="#{msg['city.district']}" sortBy="#{city.district}">
-                    #{city.district}
-                </p:column>
-                <p:column headerText="#{msg['city.region']}" sortBy="#{city.region}">
-                    #{city.region}
-                </p:column>
-                <p:column>
-                    <p:commandButton value="#{msg['button.edit']}" oncomplete="PF('cityDlg').show();"
-                                     update=":cityForm:cityDialog"
-                                     actionListener="#{cityController.update(city, currentCity)}" />
-                    <p:commandButton value="msg['button.remove']" update="citiesTable"
-                                     actionListener="#{cityController.delete(city.id)}" />
-                </p:column>
-                <f:facet name="footer">
-                    <div style="margin-top: 20px; text-align: right">
-                        <p:commandButton value="#{msg['button.add']}"
-                                         actionListener="#{currentCity.clear()}"
-                                         oncomplete="PF('cityDlg').show();" update=":cityForm:cityDialog" />
-                    </div>
-                </f:facet>
-            </p:dataTable>
-        </p:panel>
-    </div>
-</h:body>
+            <p:panel header="#{msg['city.caption']}"
+                     style="width:600px;margin-left:auto;margin-right:auto">
+                <p:dataTable var="city" value="#{cityController.cities}"
+                             id="citiesTable">
+                    <p:column headerText="#{msg['city.name']}" sortBy="#{city.name}">
+                        #{city.name}
+                    </p:column>
+                    <p:column headerText="#{msg['city.district']}"
+                              sortBy="#{city.district}">
+                        #{city.district}
+                    </p:column>
+                    <p:column headerText="#{msg['city.region']}"
+                              sortBy="#{city.region}">
+                        #{city.region}
+                    </p:column>
+                    <p:column>
+                        <p:commandButton value="#{msg['button.edit']}"
+                                         oncomplete="PF('cityDlg').show();" update=":cityForm:cityDialog"
+                                         actionListener="#{cityController.update(city, currentCity)}"/>
+                        <p:commandButton value="msg['button.remove']" update="citiesTable"
+                                         actionListener="#{cityController.delete(city.id)}"/>
+                    </p:column>
+                    <f:facet name="footer">
+                        <div style="margin-top: 20px; text-align: right">
+                            <p:commandButton value="#{msg['button.add']}"
+                                             actionListener="#{currentCity.clear()}"
+                                             oncomplete="PF('cityDlg').show();" update=":cityForm:cityDialog"/>
+                        </div>
+                    </f:facet>
+                </p:dataTable>
+            </p:panel>
+        </div>
+    </h:body>
+</f:view>
 </html>

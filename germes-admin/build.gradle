@@ -22,3 +22,13 @@ gretty {
     servletContainer = 'tomcat8'
 }
 
+processResources {
+
+    doFirst {
+        ant.native2ascii(
+                src   : project.file('src/main/resources/txt'),
+                dest  : project.file('src/main/resources/ui')
+        )
+    }
+    exclude('txt')
+}

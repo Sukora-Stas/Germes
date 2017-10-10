@@ -1,28 +1,28 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-				xmlns:ui="http://java.sun.com/jsf/facelets"
-				xmlns:h="http://java.sun.com/jsf/html"
-				xmlns:p="http://primefaces.org/ui"
-				xmlns:f="http://java.sun.com/jsf/core">
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+>
 
-	<h:form id="cityForm">
-		<p:dialog id="cityDialog" header="#{msg['city.details']}" widgetVar="cityDlg"
-				  modal="true" closeOnEscape="true">
-			<h:panelGrid columns="2">
-				<h:outputText value="#{msg['city.name']}" />
-				<p:inputText value="#{currentCity.name}" />
-				<h:outputText value="#{msg['city.district']}" />
-				<p:inputText value="#{currentCity.district}" />
-				<h:outputText value="#{msg['city.region']}" />
-				<p:inputText value="#{currentCity.region}" />
-			</h:panelGrid>
+    <h:form id="cityForm">
+        <p:dialog id="cityDialog" header="#{msg['city.details']}" widgetVar="cityDlg"
+                  modal="true" closeOnEscape="true">
+            <h:panelGrid columns="2">
+                <h:outputText value="#{msg['city.name']}"/>
+                <p:inputText value="#{currentCity.name}"/>
+                <h:outputText value="#{msg['city.district']}"/>
+                <p:inputText value="#{currentCity.district}"/>
+                <h:outputText value="#{msg['city.region']}"/>
+                <p:inputText value="#{currentCity.region}"/>
+            </h:panelGrid>
 
-			<div style="text-align: right; margin-top: 20px">
-				<p:commandButton oncomplete="PF('cityDlg').hide();"
-								 actionListener="#{cityController.saveCity(currentCity)}"
-								 value="#{msg['button.save']}" update="citiesTable" />
-				<p:commandButton value="#{msg['button.cancel']}"
-								 oncomplete="PF('cityDlg').hide();" />
-			</div>
-		</p:dialog>
-	</h:form>
+            <div style="text-align: right; margin-top: 20px">
+                <p:commandButton oncomplete="PF('cityDlg').hide();"
+                                 actionListener="#{cityController.saveCity(currentCity)}"
+                                 value="#{msg['button.save']}" update="citiesTable"/>
+                <p:commandButton value="#{msg['button.cancel']}"
+                                 oncomplete="PF('cityDlg').hide();"/>
+            </div>
+        </p:dialog>
+    </h:form>
 </ui:composition>
