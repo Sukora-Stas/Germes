@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="germes-presentation:war">
-    <output-path>$PROJECT_DIR$/germes-presentation/target</output-path>
-    <root id="archive" name="Germes.war">
-      <element id="artifact" artifact-name="germes-presentation:war exploded" />
-    </root>
-  </artifact>
-</component>
