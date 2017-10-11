@@ -10,7 +10,7 @@ dependencies {
     compile 'org.jboss.weld.servlet:weld-servlet:' + weldVersion
     runtime 'javax.enterprise:cdi-api:1.2'
     runtime 'com.h2database:h2:' + h2Version
-    compile 'org.jboss.weld.servlet:weld-servlet:' + weldVersion
+//    compile 'org.jboss.weld.servlet:weld-servlet:' + weldVersion
     compile 'org.primefaces.themes:bootstrap:1.0.10'
     compile 'org.projectlombok:lombok:1.16.14'
     compile("org.apache.shiro:shiro-core:${apacheShiroVersion}")
