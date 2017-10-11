@@ -16,6 +16,7 @@ public interface Transformer {
 
     /**
      * Converts specified entity into DTO object
+     *
      * @param entity
      * @param clz
      * @return
@@ -24,6 +25,7 @@ public interface Transformer {
 
     /**
      * Converts specified entity into existing DTO object
+     *
      * @param entity
      * @param dest
      * @return
@@ -32,6 +34,7 @@ public interface Transformer {
 
     /**
      * Converts specified DTO object into business entity
+     *
      * @param dto
      * @param clz
      * @return

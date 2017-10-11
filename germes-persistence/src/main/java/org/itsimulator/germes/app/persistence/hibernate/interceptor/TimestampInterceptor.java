@@ -1,14 +1,15 @@
 package org.itsimulator.germes.app.persistence.hibernate.interceptor;
 
-import java.io.Serializable;
-import java.time.LocalDateTime;
-
 import org.apache.commons.lang3.ArrayUtils;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
 /**
+ * Initializes mandatory timestamp fields for the entities
  * Created by Sukora Stas.
  */
 

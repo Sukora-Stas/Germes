@@ -4,10 +4,10 @@ package org.itsimulator.germes.app.service;
  * Created by Sukora Stas.
  */
 
+import org.itsimulator.germes.app.model.entity.person.User;
+
 import java.util.List;
 import java.util.Optional;
-
-import org.itsimulator.germes.app.model.entity.person.User;
 
 /**
  * Provides API for the user management
@@ -15,12 +15,14 @@ import org.itsimulator.germes.app.model.entity.person.User;
 public interface UserService {
     /**
      * Saves(creates or modifies) specified user instance
+     *
      * @param city
      */
     void save(User user);
 
     /**
      * Returns user with specified identifier boxed into Optional
+     *
      * @param cityId
      * @return
      */
@@ -28,6 +30,7 @@ public interface UserService {
 
     /**
      * Returns user with specified username
+     *
      * @param userName
      * @return
      */
@@ -35,12 +38,14 @@ public interface UserService {
 
     /**
      * Delete city with specified identifier
+     *
      * @param cityId
      */
     void delete(int userId);
 
     /**
      * Returns all the cities
+     *
      * @return
      */
     List<User> findAll();

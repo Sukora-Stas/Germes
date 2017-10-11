@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  */
 public class StationTest {
 
-    @Test(expected = NullPointerException.class)
+    @Test(expected=NullPointerException.class)
     public void testMatchCriteriaNotInitialized() {
         City city = new City("Odessa");
         Station station = new Station(city, TransportType.AUTO);

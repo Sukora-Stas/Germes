@@ -18,8 +18,6 @@ import java.util.function.Function;
 
 /**
  * Base class for all Hibernate-based repository implementations
- *
- * @author Morenets
  */
 public abstract class BaseHibernateRepository {
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseHibernateRepository.class);

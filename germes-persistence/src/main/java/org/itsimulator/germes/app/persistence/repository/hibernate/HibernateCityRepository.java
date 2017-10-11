@@ -13,6 +13,7 @@ import javax.inject.Named;
 import java.util.List;
 
 /**
+ * Hibernate implementation of {@link CityRepository}
  * Created by Sukora Stas.
  */
 @Named

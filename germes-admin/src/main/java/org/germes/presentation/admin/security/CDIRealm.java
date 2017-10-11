@@ -59,4 +59,3 @@ public class CDIRealm extends AuthorizingRealm {
         return new SimpleAccount();
     }
 }
-

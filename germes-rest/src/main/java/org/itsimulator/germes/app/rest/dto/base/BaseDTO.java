@@ -43,4 +43,3 @@ public abstract class BaseDTO<T extends AbstractEntity> implements Transformable
         this.id = id;
     }
 }
-

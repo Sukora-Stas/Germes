@@ -10,9 +10,6 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Sukora Stas.
- */
 public class HibernateCityRepositoryTest {
     private UserRepository repository;
 
@@ -64,6 +61,5 @@ public class HibernateCityRepositoryTest {
         users = repository.findAll();
         assertEquals(users.size() + 1, oldCount);
     }
-
 
 }

@@ -60,6 +60,7 @@ public interface GeographicService {
 
     /**
      * Delete city with specified identifier
+     *
      * @param cityId
      */
     void deleteCity(int cityId);

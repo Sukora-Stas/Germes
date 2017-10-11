@@ -6,7 +6,7 @@ import java.nio.charset.Charset;
 
 /**
  * Created by Sukora Stas.
- *  Security and encryption-related routines
+ * Security and encryption-related routines
  */
 public class SecurityUtil {
     private SecurityUtil() {
@@ -14,6 +14,7 @@ public class SecurityUtil {
 
     /**
      * Encryptes source text using SHA-2 encoding
+     *
      * @param source
      * @return
      */

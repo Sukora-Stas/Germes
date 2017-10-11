@@ -24,7 +24,7 @@ karma {
     browsers = ['Chrome']
     frameworks = ['jasmine']
     reporters = ['progress']
-    profile('default')  {
+    profile('default') {
         libraryBases = ['bower_components/']
         libraryFiles = ['angular/angular.js', 'angular-mocks/angular-mocks.js', 'angular-resource/angular-resource.js',
                         'angular-translate/angular-translate.js', 'angular-translate-loader-static-files/angular-translate-loader-static-files.js']

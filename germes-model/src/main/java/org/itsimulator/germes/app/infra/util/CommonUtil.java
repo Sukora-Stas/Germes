@@ -1,12 +1,12 @@
 package org.itsimulator.germes.app.infra.util;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * Created by Sukora Stas.
@@ -44,6 +44,7 @@ public class CommonUtil {
     /**
      * Dynamically converts param into string representation using all
      * object state
+     *
      * @param param
      * @return
      */

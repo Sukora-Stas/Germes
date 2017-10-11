@@ -2,7 +2,7 @@ plugins {
     id "org.akhikhl.gretty" version "1.4.2"
 }
 
-allprojects  {
+allprojects {
     apply plugin: 'maven'
     apply plugin: 'eclipse'
 
@@ -49,5 +49,6 @@ subprojects {
 
 eclipse {
     classpath {
-        downloadSources=true
-    }}
+        downloadSources = true
+    }
+}

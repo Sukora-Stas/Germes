@@ -1,18 +1,9 @@
 package org.itsimulator.germes.app.model.entity.base;
 
-import java.time.LocalDateTime;
-
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToOne;
-import javax.persistence.PrePersist;
-
 import org.itsimulator.germes.app.model.entity.person.User;
+
+import javax.persistence.*;
+import java.time.LocalDateTime;
 
 /**
  * Base class for all business entities

@@ -18,7 +18,7 @@ import javax.ws.rs.ApplicationPath;
 
 @ApplicationPath("api")
 @SwaggerDefinition(info = @Info(description = "Booking and purchasing API definition", title = "Germes project", version = "0.7.4",
-        contact = @Contact(email = "st.sukora@gmail.com", name = "Stas Sukora", url = "http://")))
+        contact = @Contact(email = "st.sukora@gmail.com", name = "Sukora Stas")))
 /**
  * REST web-service configuration for Jersey
  */

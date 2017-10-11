@@ -1,14 +1,14 @@
 package org.itsimulator.germes.app.infra.util;
 
-import static org.junit.Assert.*;
-
-import java.util.Collections;
-import java.util.List;
-
 import org.itsimulator.germes.app.infra.exception.ConfigurationException;
 import org.itsimulator.germes.app.infra.exception.flow.InvalidParameterException;
 import org.itsimulator.germes.app.infra.util.annotation.Ignore;
 import org.junit.Test;
+
+import java.util.Collections;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by Sukora Stas.

@@ -6,7 +6,9 @@
         <artifactId>germes</artifactId>
         <version>1.0.0</version>
     </parent>
+
     <artifactId>germes-service</artifactId>
+    
     <dependencies>
         <dependency>
             <groupId>org.it-simulator</groupId>

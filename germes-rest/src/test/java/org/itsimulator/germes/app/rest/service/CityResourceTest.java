@@ -1,18 +1,17 @@
 package org.itsimulator.germes.app.rest.service;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.core.Application;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-
 import org.glassfish.jersey.test.JerseyTest;
 import org.itsimulator.germes.app.rest.dto.CityDTO;
 import org.itsimulator.germes.app.rest.service.config.JerseyConfig;
 import org.junit.Ignore;
 import org.junit.Test;
+
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.Application;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 

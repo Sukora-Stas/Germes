@@ -18,7 +18,7 @@ import java.util.List;
 @Named
 @DBSource
 /**
- * Hibernate implementation of StationRepository
+ * Hibernate implementation of {@link StationRepository}
  */
 public class HibernateStationRepository extends BaseHibernateRepository implements StationRepository {
 
@@ -47,4 +47,3 @@ public class HibernateStationRepository extends BaseHibernateRepository implemen
     }
 
 }
-

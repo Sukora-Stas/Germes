@@ -2,16 +2,15 @@
 <Configuration status="INFO">
     <Appenders>
         <Console name="STDOUT" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n" />
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level - %msg%n"/>
         </Console>
     </Appenders>
     <Loggers>
         <logger name="org.itsimulator.germes.app.rest.exception" level="OFF">
-            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="STDOUT"/>
         </logger>
         <Root level="ERROR">
-            <AppenderRef ref="STDOUT" />
+            <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
 </Configuration>
-
