@@ -1,11 +1,13 @@
 .settings
+*.iml
 .gradle
 .idea
 .springBeans
+*.bin
+*.lock
 bin
 out/
 gradle
-*.iml
 target/
 build/
 .classpath

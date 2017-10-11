@@ -6,6 +6,7 @@
         <webroots>
           <root url="file://D:\ProjectJava\germes\germes-presentation\src\main\webapp" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -38,8 +39,8 @@
     <orderEntry type="library" scope="PROVIDED" name="Gradle: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.25.1" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.jersey.media:jersey-media-json-jackson:2.25.1" level="project" />
-    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.39" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: com.h2database:h2:1.4.194" level="project" />
+    <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.39" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-core:5.2.8.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-validator:5.4.0.Final" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish.web:javax.el:2.2.4" level="project" />
